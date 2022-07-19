@@ -1,23 +1,22 @@
 import Navbar from '../Navbar/Navbar';
+import Home from '../Home/Home'
 import './Layout.scss';
 
 const Layout = () => {
     return (
         <div className='container'>
             <Navbar />
-            <section className='Page One'>
-                <h1>
-                    Home
-                </h1>
+            <section id='home' >
+                <Home />
             </section>
             <section>
                 <h1>
                     About
                 </h1>
             </section>
-            <section className='Page Three'>
-                <h1>
-                    Experience
+            <section id='contact' >
+                <h1 id='contact'>
+                    Contact
                 </h1>
             </section>
 
