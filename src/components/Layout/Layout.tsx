@@ -6,19 +6,19 @@ const Layout = () => {
     return (
         <div className='container'>
             <Navbar />
-            <section id='home' >
+            <div id='home' className='section'>
                 <Home />
-            </section>
-            <section>
+            </div>
+            <div id='about'className='section'>
                 <h1>
                     About
                 </h1>
-            </section>
-            <section id='contact' >
+            </div >
+            <div id='contact' className='section'>
                 <h1 id='contact'>
                     Contact
                 </h1>
-            </section>
+            </div>
 
         </div>
     )

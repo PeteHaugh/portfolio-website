@@ -1,3 +1,10 @@
-.Black {
+.container {
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+.black {
     color: #ffd171;
+    font-size: 8em;
+    transition: opacity 1s ease-in;
 }
