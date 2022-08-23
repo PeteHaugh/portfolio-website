@@ -11,12 +11,12 @@ export const NavItems = [
     },
     {
         title: 'Experience',
-        url: '#',
+        url: '#experience',
         className: 'nav-links'
     },
     {
         title: 'Projects',
-        url: '#',
+        url: '#projects',
         className: 'nav-links'
     },
     {

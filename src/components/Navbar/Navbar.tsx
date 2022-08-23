@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import './Navbar.scss';
 import { NavItems } from './NavItems';
+import useTheme from '../../hooks/useTheme';
+import useDirection from '../../hooks/useScroll';
 
 const Navbar = () => {
-    const [clicked, setClicked] = useState(false)
 
+    const [clicked, setClicked] = useState(false)
+    const { onToggleTheme, isDarkTheme } = useTheme();
+    const scrollDirection = useDirection();
 
     return (
-        <nav className='NavbarItems'>
+        <nav className={scrollDirection === "down" ? "Navbar--hidden" : "Navbar"}>
             <h1 className='navbar-logo'>P Logo</h1>
             <div className='menu-icon' onClick={() => setClicked(!clicked)}>
                 <i className={clicked ? "ph-x" : "ph-list"}></i>
@@ -23,6 +27,11 @@ const Navbar = () => {
                     )
                 })}
             </ul>
+            <button
+                    onClick={onToggleTheme}
+                    >
+                    {isDarkTheme ? "Light" : "Dark"}
+            </button>
         </nav>
     )
 }
