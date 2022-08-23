@@ -1,5 +1,5 @@
 .Navbar{
-    background: red;
+    background: #ffd171;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -10,11 +10,12 @@
     transition: top 0.6s;
     top: 0;
     padding: 10px;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 
 .Navbar--hidden {
     top: -100px;
-    background: red;
+    background: #ffd171;
     height: 80px;
     display: flex;
     justify-content: center;

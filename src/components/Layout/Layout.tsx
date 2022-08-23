@@ -1,11 +1,15 @@
 import Navbar from '../Navbar/Navbar';
 import Home from '../Home/Home'
 import './Layout.scss';
+import { useEffect } from 'react';
 
 
 const Layout = () => {
 
-
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
 
     return (
         <div className='container'>
@@ -18,6 +22,7 @@ const Layout = () => {
                 <h1>
                     About
                 </h1>
+                <p>Hello! I'm Pete, a mechanical engineer turned software engineer</p>
             </div >
             <div id='experience' className='section'>
                 <h1>
@@ -34,10 +39,16 @@ const Layout = () => {
                     Contact
                 </h1>
             </div>
+            <button className='button'
+                    onClick={() => {
+                        window.scrollTo({top: 0, left: 0})
+                    }}>
+            </button>
             
             
 
         </div>
+
     )
 }
 
