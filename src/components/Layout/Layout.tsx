@@ -2,6 +2,7 @@ import Navbar from '../Navbar/Navbar';
 import Home from '../Home/Home'
 import './Layout.scss';
 import { useEffect } from 'react';
+import Projects from '../Projects/Projects';
 
 
 const Layout = () => {
@@ -30,15 +31,14 @@ const Layout = () => {
                 </h1>
             </div>
             <div id='projects' className='section'>
-                <h1>
-                    Projects
-                </h1>
+                <Projects />
             </div>
             <div id='contact' className='section'>
                 <h1>
                     Contact
                 </h1>
             </div>
+            
             <button className='button'
                     onClick={() => {
                         window.scrollTo({top: 0, left: 0})
