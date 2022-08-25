@@ -7,10 +7,20 @@ const Projects = () => {
 
     const ref: any = useRef();
     const onScreen = useOnScreen(ref, "-300px")
-    const transition = useTransition(onScreen, {
-        from: { x: -100, y: 800, opacity: 0 },
-        enter: { x: 0, y: 0, opacity: 1},
-        leave: { x: -100, y: 800, opacity: 0 },
+
+    const items = onScreen ? [
+        { x: -100, y: -100, delay: 200 },
+        { x: 100, y: 0, delay: 400 },
+        { x: -100, y: 100, delay: 600 },
+    ] : []
+
+    const transition = useTransition(items, {
+        from: { x: -100, y: 0, opacity: 0 },
+        enter: item => async (next) => {
+            await next({ y: item.y, opacity: 1, delay: item.delay});
+            await next({ x: item.x});
+        },
+        leave: { x: -100, y: 0, opacity: 0 },
     });
 
     
@@ -20,7 +30,8 @@ const Projects = () => {
         <h1>Projects</h1>
 
         <div className='projects' ref={ref}>
-            {transition((style, item) => item ? <animated.div style={style} className='item' /> : '')}
+            {transition((style, item) => item ? <animated.div style={style} className='item' >number 1</animated.div> : '')}
+
         </div>
     </div>
 
