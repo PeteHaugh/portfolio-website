@@ -15,7 +15,7 @@ const Layout = () => {
         <div className='container'>
             <Navbar />
             <div id='home' className='section'>
-                {/* <Home /> */}
+                <Home />
                 
             </div>
             <div id='about' className='section'>
@@ -30,18 +30,23 @@ const Layout = () => {
                 </h1>
             </div>
             <div id='projects' className='section'>
-                {/* <Projects /> */}
+                <Projects />
             </div>
             <div id='contact' className='section'>
                 <h1>
                     Contact
                 </h1>
+                <p>
+                    My inbox is always open so feel free to get in touch!
+                </p>
+                <button></button>
             </div>
             
             <button className='button'
                     onClick={() => {
                         window.scrollTo({top: 0, left: 0})
                     }}>
+                    Return to top
             </button>
             
             
