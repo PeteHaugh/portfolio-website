@@ -8,7 +8,6 @@ import Projects from '../Projects/Projects';
 const Layout = () => {
 
     useEffect(() => {
-        // 👇️ scroll to top on page load
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
       }, []);
 
@@ -16,10 +15,10 @@ const Layout = () => {
         <div className='container'>
             <Navbar />
             <div id='home' className='section'>
-                <Home />
+                {/* <Home /> */}
                 
             </div>
-            <div id='about'className='section'>
+            <div id='about' className='section'>
                 <h1>
                     About
                 </h1>
@@ -31,7 +30,7 @@ const Layout = () => {
                 </h1>
             </div>
             <div id='projects' className='section'>
-                <Projects />
+                {/* <Projects /> */}
             </div>
             <div id='contact' className='section'>
                 <h1>

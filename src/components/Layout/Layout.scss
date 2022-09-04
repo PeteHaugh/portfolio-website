@@ -1,27 +1,21 @@
 html {
     scroll-behavior: smooth;
-    transition: background-color 1000ms linear;
 }
 
 :root {
-    --primary-color: #ffd171;
-    --secondary-color: #536390;
-    --font-color: #424242;
-    --font-color-inverted: #e1e1ff;
-    --bg-color: #fff;
-    --bg-color-inverted: #161625;
-    --heading-color: #292922;
-  }
+    --primary-color: #eae7dc;
+    --secondary-color: #D8C3A5;
+    --font-color: #8E8D8A;
+    --heading-color: #E85A4F;
+    
+}
   
-  [data-theme="dark"] {
-    --primary-color: #1c1d25;
+[data-theme="dark"] {
+    --primary-color: #0B132B;
     --secondary-color: #818cab;
     --font-color: #e1e1ff;
-    --font-color-inverted: #424242;
-    --bg-color: #161625;
-    --bg-color-inverted: #fff;
     --heading-color: #818cab;
-  }
+}
 
 body {
     width: 100vw;
@@ -29,6 +23,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: overlay;
+    
 
     .container {
         width: 100%;
@@ -41,7 +36,8 @@ body {
             width: 100vw;
             height: 100vh;
             background-color: var(--primary-color);
-            color: #925bff;
+            transition: background-color 0.5s ease;
+            color: var(--font-color);
 
         }
     }
@@ -55,7 +51,10 @@ body {
     border-radius: 8px;
     background-color: transparent;
     color: var(--font-color);
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
     align-items: center;
   }
+
 
   
