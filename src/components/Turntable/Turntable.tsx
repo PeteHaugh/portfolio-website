@@ -63,14 +63,9 @@ const Turntable: React.FC<ComponentProps> = () => {
 
         AngleV = (Angle - AngleOld)/(1/60)
         p5.translate(p5.width / 2, p5.height / 2)
-        p5.rotate(a + b);
+        p5.rotate((a + b)*val);
 
-        p5.image(pizza, 0, 0, 300, 300)
-
-        //p5.fill(100,100,0)
-        //p5.rect(0, 0, 300, 300);
-
-        
+        p5.image(pizza, 0, 0, 300, 300);
         
         let speed = (AngleV/180)*val;
         speed = p5.constrain(speed, -5, 5);
