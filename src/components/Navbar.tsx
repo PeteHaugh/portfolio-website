@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './Navbar.scss';
-import { NavItems } from './NavItems';
-import useTheme from '../../hooks/useTheme';
-import useDirection from '../../hooks/useScroll';
+import { NavItems } from '../utils/NavItems';
+import useTheme from '../hooks/useTheme';
+import useDirection from '../hooks/useScroll';
 
 const Navbar = () => {
 

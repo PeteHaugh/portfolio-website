@@ -2,10 +2,10 @@ import React from 'react'
 
 type Props = {}
 
-const TurntableProject = (props: Props) => {
+const TurntablePage = (props: Props) => {
   return (
-    <div>TurntableProject</div>
+    <div>TurntablePage</div>
   )
 }
 
-export default TurntableProject
+export default TurntablePage

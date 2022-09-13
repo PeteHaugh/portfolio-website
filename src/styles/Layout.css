@@ -1,0 +1,60 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #eae7dc;
+    --secondary-color: #D8C3A5;
+    --font-color: #8E8D8A;
+    --heading-color: #E85A4F;
+    
+}
+  
+[data-theme="dark"] {
+    --primary-color: #0B132B;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --heading-color: #818cab;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: overlay;
+
+}
+    
+.container {
+width: 100%;
+height: 100%;
+
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    transition: background-color 0.5s ease;
+    color: var(--font-color);
+
+}
+
+
+button {
+
+border: 4px solid black;
+border-radius: 8px;
+background-color: transparent;
+color: var(--font-color);
+transition: background-color 0.5s ease;
+transition: color 0.5s ease;
+align-items: center;
+}
+
+
+  

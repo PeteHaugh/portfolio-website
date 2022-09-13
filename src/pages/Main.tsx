@@ -1,11 +1,11 @@
-import Navbar from '../Navbar/Navbar';
-import Home from '../Home/Home'
+import Navbar from '../components/Navbar';
+import Home from '../components/Home'
 import './Layout.scss';
 import { useEffect } from 'react';
-import Projects from '../Projects/Projects';
+import Projects from '../components/Projects';
 
 
-const Layout = () => {
+const Main = () => {
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -56,4 +56,4 @@ const Layout = () => {
     )
 }
 
-export default Layout
+export default Main

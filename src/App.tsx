@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
-import Layout from './components/Layout/Layout';
-import Turntable from './components/Turntable/Turntable';
-import Spotify from './components/Spotify/Spotify';
-import ConnectFour from './components/ConnectFour/ConnectFour';
+import Layout from './pages/Main';
+import Turntable from './components/Turntable';
+import Spotify from './components/Spotify';
+import ConnectFour from './components/ConnectFour';
 
 const App: React.FC = () => {
   return (
