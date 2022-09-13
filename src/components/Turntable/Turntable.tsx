@@ -89,7 +89,6 @@ const Turntable: React.FC<ComponentProps> = () => {
 
 	return (
         <div className="App">
-            <h1>TURNTABLE</h1>
             <Sketch preload={preload} setup={setup} draw={draw} mousePressed={mousePressed}/>
         </div>
     );
