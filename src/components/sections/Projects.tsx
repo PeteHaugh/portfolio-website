@@ -1,7 +1,7 @@
-import { StyledProjects } from '../styles';
+import { StyledProjects } from '../../styles';
 import { useRef, useState } from 'react';
 import { useTransition, animated } from 'react-spring';
-import useOnScreen from '../hooks/useOnScreen'
+import useOnScreen from '../../hooks/useOnScreen'
 
 const Projects = () => {
 

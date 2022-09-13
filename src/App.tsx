@@ -5,7 +5,6 @@ import {
   useLocation 
 } from 'react-router-dom';
 import { GlobalStyle } from './styles';
-import Main from './pages/MainPage';
 import { useLayoutEffect } from 'react';
 import { 
   TurntablePage, 
@@ -16,23 +15,23 @@ import {
   MainPage
 } from './pages';
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useLayoutEffect(() => {
-    document.documentElement.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-} 
+// const ScrollToTop = () => {
+//   const { pathname } = useLocation();
+//   useLayoutEffect(() => {
+//     document.documentElement.scrollTo(0, 0);
+//   }, [pathname]);
+//   return null;
+// } 
 
 const App: React.FC = () => {
   return (
-    <div className='App' >
+    <div className='app'>
       <GlobalStyle />
 
         <Router>
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<MainPage />} />
             
             <Route path="/Turntable" element={<TurntablePage />} />
             <Route path="/ConnectFour" element={<ConnectFourPage />} />

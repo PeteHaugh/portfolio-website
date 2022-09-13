@@ -47,7 +47,8 @@ const Turntable: React.FC<ComponentProps> = () => {
 	};
 
 	const draw = (p5: p5Types) => {
-		p5.background('');
+        p5.clear()
+		//p5.background(0);
         
         let val = slider.value();
         
@@ -63,7 +64,7 @@ const Turntable: React.FC<ComponentProps> = () => {
 
         AngleV = (Angle - AngleOld)/(1/60)
         p5.translate(p5.width / 2, p5.height / 2)
-        p5.rotate((a + b)*val);
+        p5.rotate((a * val)+ b);
 
         p5.image(pizza, 0, 0, 300, 300);
         

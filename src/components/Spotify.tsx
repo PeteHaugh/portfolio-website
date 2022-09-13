@@ -4,7 +4,7 @@ type Props = {}
 
 const Spotify = (props: Props) => {
   return (
-    <div>spotify</div>
+    <div>Spotify Stats</div>
   )
 }
 

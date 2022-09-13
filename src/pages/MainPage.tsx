@@ -1,25 +1,22 @@
-import Navbar from '../components/Navbar';
-import Home from '../components/Home'
-import { StyledLayout } from '../styles';
+
 import { useEffect } from 'react';
-import Projects from '../components/Projects';
+import { Projects, Home, About, Navbar } from '../components';
 
 
 const MainPage = () => {
 
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      }, []);
+    // useEffect(() => {
+    //     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    //   }, []);
 
     return (
-        <div className='container'>
+        <>
             <Navbar />
-            <div id='home' className='section'>
+            <div id='home'>
                 <Home />
             </div>
             <div id='about' className='section'>
-                {/* <About /> */}
-                <p>Hello! I'm Pete, a mechanical engineer turned software engineer</p>
+                <About />
             </div >
             <div id='projects' className='section'>
                 <Projects />
@@ -31,19 +28,18 @@ const MainPage = () => {
                 <p>
                     My inbox is always open so feel free to get in touch!
                 </p>
-                <button></button>
             </div>
             
-            <button className='button'
+            {/* <button className='button'
                     onClick={() => {
                         window.scrollTo({top: 0, left: 0})
                     }}>
                     Return to top
-            </button>
+            </button> */}
             
             
 
-        </div>
+        </>
 
     )
 }
