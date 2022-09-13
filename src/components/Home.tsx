@@ -1,4 +1,4 @@
-import './Home.scss';
+import { StyledHome } from "../styles";
 
 
 export const Home = () => {

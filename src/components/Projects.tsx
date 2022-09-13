@@ -1,4 +1,4 @@
-import './Projects.scss'
+import { StyledProjects } from '../styles';
 import { useRef, useState } from 'react';
 import { useTransition, animated } from 'react-spring';
 import useOnScreen from '../hooks/useOnScreen'

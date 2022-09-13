@@ -10,11 +10,6 @@ export const NavItems = [
         className: 'nav-links'
     },
     {
-        title: 'Experience',
-        url: '#experience',
-        className: 'nav-links'
-    },
-    {
         title: 'Projects',
         url: '#projects',
         className: 'nav-links'

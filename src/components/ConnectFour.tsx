@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useState, useReducer } from 'react'
 import { make_move, start_game } from '../api/ConnectFour'
-import './ConnectFour.scss'
+import '../styles'
 
 
 const ConnectFour = () => {

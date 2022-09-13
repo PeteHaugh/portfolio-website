@@ -1,11 +1,11 @@
 import Navbar from '../components/Navbar';
 import Home from '../components/Home'
-import './Layout.scss';
+import { StyledLayout } from '../styles';
 import { useEffect } from 'react';
 import Projects from '../components/Projects';
 
 
-const Main = () => {
+const MainPage = () => {
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -16,19 +16,11 @@ const Main = () => {
             <Navbar />
             <div id='home' className='section'>
                 <Home />
-                
             </div>
             <div id='about' className='section'>
-                <h1>
-                    About
-                </h1>
+                {/* <About /> */}
                 <p>Hello! I'm Pete, a mechanical engineer turned software engineer</p>
             </div >
-            <div id='experience' className='section'>
-                <h1>
-                    Experience
-                </h1>
-            </div>
             <div id='projects' className='section'>
                 <Projects />
             </div>
@@ -56,4 +48,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default MainPage
