@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components/macro';
+import TransitionStyles from './TransitionsStyles';
 import variables from './variables';
 
 const GlobalStyle = createGlobalStyle`
@@ -7,6 +8,17 @@ const GlobalStyle = createGlobalStyle`
 
     html {
         box-sizing: border-box;
+        scrollbar-width: thin;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
     }
 
     body {
@@ -19,7 +31,23 @@ const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         background-color: var(--primary-color);
+        color: var(--font-color);
     }
+
+    :root {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 100%;
+    }
+
+    main {
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+
+    ${TransitionStyles}
 
 `;
 

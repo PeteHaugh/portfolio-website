@@ -15,13 +15,13 @@ import {
   MainPage
 } from './pages';
 
-// const ScrollToTop = () => {
-//   const { pathname } = useLocation();
-//   useLayoutEffect(() => {
-//     document.documentElement.scrollTo(0, 0);
-//   }, [pathname]);
-//   return null;
-// } 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+} 
 
 const App: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const App: React.FC = () => {
       <GlobalStyle />
 
         <Router>
-          {/* <ScrollToTop /> */}
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<MainPage />} />
             

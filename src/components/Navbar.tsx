@@ -3,6 +3,9 @@ import { StyledNavBar } from '../styles';
 import { NavItems } from '../utils/NavItems';
 import useTheme from '../hooks/useTheme';
 import useDirection from '../hooks/useScroll';
+import styled from 'styled-components';
+
+
 
 const Navbar = () => {
 
