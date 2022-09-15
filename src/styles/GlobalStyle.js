@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
         scrollbar-width: thin;
+        scroll-behavior: smooth;
+        padding: 0;
     }
 
     *,

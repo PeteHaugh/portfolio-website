@@ -1,9 +1,16 @@
 import { useEffect } from 'react';
-import { Projects, Home, About, Navbar, Layout } from '../components';
+import { Projects, Home, About, Navbar, Layout, Contact } from '../components';
 import styled from 'styled-components';
 
 const StyledMainPage = styled.main`
     
+`;
+
+const StyledSection = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: block;
+    padding: 0 100px;
 `;
 
 
@@ -17,24 +24,19 @@ const MainPage = () => {
         <>
             <StyledMainPage>
             {/* <Layout>            */}
-                <Navbar />
-                <div id='home'>
+                {/* <Navbar /> */}
+                <StyledSection id='home'>
                     <Home />
-                </div>
-                <div id='about' >
+                </StyledSection>
+                <StyledSection id='about'>
                     <About />
-                </div >
-                <div id='projects' >
+                </StyledSection >
+                <StyledSection id='projects' >
                     <Projects />
-                </div>
-                <div id='contact' >
-                    <h1>
-                        Contact
-                    </h1>
-                    <p>
-                        My inbox is always open so feel free to get in touch!
-                    </p>
-                </div>
+                </StyledSection>
+                <StyledSection id='contact' >
+                    <Contact />
+                </StyledSection>
                 
                 {/* <button className='button'
                         onClick={() => {

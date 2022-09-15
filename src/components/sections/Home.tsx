@@ -3,16 +3,15 @@ import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const StyledHomeSection = styled.section`
-  
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0; 
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 0 100px;
+  position: absolute;
   text-align: left;
+  top: 50%;
+  width: 100%;
 
   h1 {
-    padding-top: 200px;
     margin: 0 0 30px 4px;
     font-size: 50px;
     color: var(--heading-color)

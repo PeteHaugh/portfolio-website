@@ -3,3 +3,4 @@ export { default as Home } from './sections/Home';
 export { default as Projects } from './sections/Projects';
 export { default as Navbar } from './Navbar';
 export { default as Layout } from './Layout';
+export { default as Contact } from './sections/Contact';

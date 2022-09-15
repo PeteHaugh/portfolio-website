@@ -25,7 +25,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <div className='app'>
+    <>
       <GlobalStyle />
 
         <Router>
@@ -41,7 +41,7 @@ const App: React.FC = () => {
           </Routes>
         </Router>
       
-    </div>
+    </>
   );
 }
 

@@ -5,7 +5,9 @@ import useTheme from '../hooks/useTheme';
 import useDirection from '../hooks/useScroll';
 import styled from 'styled-components';
 
-
+const StyledNavBar = styled.nav`
+    width: 100%;
+`;
 
 const Navbar = () => {
 
