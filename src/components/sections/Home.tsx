@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 const StyledHomeSection = styled.section`
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  padding: 0 100px;
+  padding: 100px 100px;
   position: absolute;
   text-align: left;
   top: 50%;

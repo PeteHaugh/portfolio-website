@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { StyledNavBar } from '../styles';
 import { NavItems } from '../utils/NavItems';
 import useTheme from '../hooks/useTheme';
 import useDirection from '../hooks/useScroll';
 import styled from 'styled-components';
+import '../styles/Navbar.css';
 
 const StyledNavBar = styled.nav`
     width: 100%;

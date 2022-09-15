@@ -24,7 +24,7 @@ const MainPage = () => {
         <>
             <StyledMainPage>
             {/* <Layout>            */}
-                {/* <Navbar /> */}
+                <Navbar />
                 <StyledSection id='home'>
                     <Home />
                 </StyledSection>

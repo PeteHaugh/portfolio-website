@@ -15,7 +15,7 @@ const StyledAboutSection = styled.section`
   /* display: flex;
   flex-direction: row; */
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 100px 100px;
   display: flex;
   height: auto;
   align-items: flex-start;

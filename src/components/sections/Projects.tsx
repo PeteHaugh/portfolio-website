@@ -1,4 +1,3 @@
-import { StyledProjects } from '../../styles';
 import { useRef, useState } from 'react';
 import { useTransition, animated } from 'react-spring';
 import useOnScreen from '../../hooks/useOnScreen'
@@ -35,14 +34,16 @@ const Projects = () => {
     
 
   return (
-    <div className='app' >
-        <h1>Projects</h1>
+    <StyledProjectsSection>
+        <div className='app' >
+            <h1>Projects</h1>
 
-        <div className='projects' ref={ref}>
-            {/* {transition((style, item) => item ? <animated.div style={style} className='item' >number 1</animated.div> : '')} */}
+            <div className='projects' ref={ref}>
+                {/* {transition((style, item) => item ? <animated.div style={style} className='item' >number 1</animated.div> : '')} */}
 
+            </div>
         </div>
-    </div>
+    </StyledProjectsSection>
 
   )
 }
