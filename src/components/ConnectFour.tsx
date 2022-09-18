@@ -51,7 +51,7 @@ const StyledGameBoard = styled.div`
 // return response.data
 
 const ConnectFour = () => {
-  const [board, setBoard] = useState(null)
+  const [board, setBoard] = useState([null, null])
   const columns = [...Array(6).keys()];
 
   const handleMove = (column) => {
@@ -78,8 +78,14 @@ const ConnectFour = () => {
 
           {board && board?.[0]?.[0].map((cell, index) => (
              <div className={cell === 'X' ? 'cellYellow' : 'cellRed'} key={index}>{cell}</div>
+           ))}
+           {board && board?.[0]?.[1].map((cell, index) => (
+             <div className={cell === 'X' ? 'cellYellow' : 'cellRed'} key={index}>{cell}</div>
            ))}   
-
+           {board && board?.[0]?.[2].map((cell, index) => (
+             <div className={cell === 'X' ? 'cellYellow' : 'cellRed'} key={index}>{cell}</div>
+           ))}   
+          {board && board[1]}
           
 
 
