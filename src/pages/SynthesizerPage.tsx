@@ -1,10 +1,14 @@
 import React from 'react'
+import { Synthesizer } from '../components/index';
+
 
 type Props = {}
 
 const SynthesizerPage = (props: Props) => {
   return (
-    <div>SynthesizerPage</div>
+    <>
+      <Synthesizer />
+    </>
   )
 }
 

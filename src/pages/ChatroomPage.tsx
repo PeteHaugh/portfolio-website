@@ -1,10 +1,8 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header/Header';
-import ChatHistory from './components/ChatHistory/ChatHistory';
-import ChatInput from './components/ChatInput/ChatInput';
-import './App.css';
-import { connect, sendMessage } from './api';
+import { Header, ChatHistory, ChatInput } from '../components';
+//import './App.css';
+import { connect, sendMessage } from '../api/ChatRoomAPI';
 
 const ChatroomPage = () => {
       const [chatHistory, setChatHistory] = useState([]);
@@ -18,7 +16,7 @@ const ChatroomPage = () => {
           ]));
         })
         console.log(chatHistory, "chatHistory")
-      }, [])
+      }, [chatHistory])
 
       function send(e) {
         if (e.keyCode === 13) {
