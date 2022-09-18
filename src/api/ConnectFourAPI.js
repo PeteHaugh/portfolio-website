@@ -6,12 +6,10 @@ const instance = axios.create({
 
 axios.defaults.baseURL = 'http://localhost:5000';
 
-export const start_game = async () => {
+const start_game = async () => {
     try {
         const response = await axios.get('/start');
-        // handle success
-        console.log(response);
-        return response
+        return response.data;
     } catch (error) {
         // handle error
         console.log(error);
@@ -19,13 +17,14 @@ export const start_game = async () => {
 }
 
 export const make_move = async (col) => {
+    let response;
+
     try {
-        const response = await axios.get(`/move/${col}`);
-        // handle success
-        console.log(response);
-        return response
+        response = await axios.get(`/move/${col}`);
     } catch (error) {
         // handle error
         console.log(error);
     }
+    return response.data
+    
 }
