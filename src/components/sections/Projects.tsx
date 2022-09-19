@@ -59,7 +59,8 @@ const Projects = () => {
                 <StyledProject>
                     <h1><Link to="/Synthesizer">Synthesizer</Link></h1>
                 </StyledProject>
-
+                <StyledProject>MATLAB</StyledProject>
+                <StyledProject>Works in Progress</StyledProject>
                 <StyledProject>Works in Progress</StyledProject>
             </div>
         </div>

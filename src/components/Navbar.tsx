@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <nav className={scrollDirection === "down" ? "Navbar--hidden" : "Navbar"}>
-            <h1 className='navbar-logo'>P Logo</h1>
+            <h1 className='navbar-logo'>P</h1>
             <div className='menu-icon' onClick={() => setClicked(!clicked)}>
                 <i className={clicked ? "ph-x" : "ph-list"}></i>
 

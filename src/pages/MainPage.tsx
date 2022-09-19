@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Projects, Home, About, Navbar, Contact } from '../components';
 import styled from 'styled-components';
+import Turntable from '../components/Turntable';
 
 const StyledMainPage = styled.main`
     
@@ -10,6 +11,7 @@ const StyledSection = styled.div`
     width: 100%;
     height: 100vh;
     padding: 0 100px;
+    background: linear-gradient(#225794, #2f3e73);
 `;
 
 const StyledAbout = styled.div`

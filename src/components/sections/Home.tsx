@@ -13,13 +13,13 @@ const StyledHomeSection = styled.section`
 
   h1 {
     margin: 0 0 30px 4px;
-    font-size: 50px;
+    font-size: 90px;
     color: var(--heading-color)
   }
 
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
+    font-size: clamp(40px, 8vw, 100px);
   }
 
 `;
