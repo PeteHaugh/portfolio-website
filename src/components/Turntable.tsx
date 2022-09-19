@@ -93,13 +93,13 @@ const Turntable: React.FC<ComponentProps> = () => {
     }
 
     function pause() {
-    if (mySound.isPlaying()) {
-        // .isPlaying() returns a boolean
-        mySound.pause();
-        rotation = 0;
+        if (mySound.isPlaying()) {
+            // .isPlaying() returns a boolean
+            mySound.pause();
+            rotation = 0;
         } else {
-        mySound.loop(); // playback will resume from the pause position
-        rotation = 1;
+            mySound.loop(); // playback will resume from the pause position
+            rotation = 1;
         }
     }
 

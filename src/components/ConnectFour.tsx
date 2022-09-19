@@ -1,12 +1,9 @@
 // @ts-nocheck
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import axios from 'axios';
 
 axios.defaults.baseURL = 'http://localhost:5000';
-
-const rows = 9;
-const columns = 7;
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -137,8 +134,8 @@ const ConnectFour = () => {
           </StyledColumn>
         </StyledGameBoard>
         <StyledButtonRow>
-        <button onClick={() => handleReset()}>New Board</button>
-        {board && board[1]}
+          <button onClick={() => handleReset()}>New Board</button>
+          {board && board[1]}
         </StyledButtonRow>
       </StyledWrapper>
     </>

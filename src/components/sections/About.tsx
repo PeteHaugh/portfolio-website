@@ -17,8 +17,8 @@ const StyledAboutSection = styled.section`
   margin: 0 auto;
   padding: 100px 100px;
   display: flex;
-  height: auto;
-  align-items: flex-start;
+  height: 100%;
+  align-items: center;
   max-width: 900px;
 
   h1 {

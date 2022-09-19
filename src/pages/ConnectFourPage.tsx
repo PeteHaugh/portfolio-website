@@ -3,6 +3,7 @@ import ConnectFour from '../components/ConnectFour'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SkipBack } from 'phosphor-react';
+import { Navbar } from '../components';
 
 type Props = {}
 
@@ -16,6 +17,7 @@ const StyledPage = styled.div`
 const ConnectFourPage = (props: Props) => {
   return (
     <StyledPage>
+      <Navbar />
       <h1>Connect Four!</h1>
       <ConnectFour />
       <Link to="/"><SkipBack size={100} /></Link>

@@ -3,6 +3,7 @@ import Turntable from '../components/Turntable'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SkipBack } from "phosphor-react";
+import { isAbsolute } from 'path';
 
 type Props = {}
 
@@ -12,11 +13,16 @@ const StyledProject = styled.div`
     
 `;
 
+const linkStyle = {
+  margin: "1rem",
+  textDecoration: "none",
+}
+
 const TurntablePage = (props: Props) => {
   return (
     <StyledProject id="canvasParent">
       <Turntable />
-      <Link to="/"><SkipBack size={100} /></Link>
+      <Link to="/" style={linkStyle}><SkipBack size={75} /></Link>
     </StyledProject>
   )
 }

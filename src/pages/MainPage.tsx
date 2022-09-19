@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Projects, Home, About, Navbar, Layout, Contact } from '../components';
+import { Projects, Home, About, Navbar, Contact } from '../components';
 import styled from 'styled-components';
 
 const StyledMainPage = styled.main`
@@ -10,6 +10,13 @@ const StyledSection = styled.div`
     width: 100%;
     height: 100vh;
     padding: 0 100px;
+`;
+
+const StyledAbout = styled.div`
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    background-color: aliceblue;
 `;
 
 const StyledProjects = styled.div`
@@ -38,9 +45,9 @@ const MainPage = () => {
                 <StyledSection id='home'>
                     <Home />
                 </StyledSection>
-                <StyledSection id='about'>
+                <StyledAbout id='about'>
                     <About />
-                </StyledSection >
+                </StyledAbout >
                 <StyledProjects id='projects' >
                     <Projects />
                 </StyledProjects>
