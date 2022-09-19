@@ -9,8 +9,19 @@ const StyledMainPage = styled.main`
 const StyledSection = styled.div`
     width: 100%;
     height: 100vh;
-    display: block;
     padding: 0 100px;
+`;
+
+const StyledProjects = styled.div`
+    height: auto;
+    width: 100%;
+    padding: 0 100px;
+`;
+
+const StyledFooter = styled.div`
+    height: 200px;
+    width: 100%;
+    background-color: red;
 `;
 
 
@@ -23,7 +34,6 @@ const MainPage = () => {
     return (
         <>
             <StyledMainPage>
-            {/* <Layout>            */}
                 <Navbar />
                 <StyledSection id='home'>
                     <Home />
@@ -31,20 +41,15 @@ const MainPage = () => {
                 <StyledSection id='about'>
                     <About />
                 </StyledSection >
-                <StyledSection id='projects' >
+                <StyledProjects id='projects' >
                     <Projects />
-                </StyledSection>
+                </StyledProjects>
                 <StyledSection id='contact' >
                     <Contact />
                 </StyledSection>
-                
-                {/* <button className='button'
-                        onClick={() => {
-                            window.scrollTo({top: 0, left: 0})
-                        }}>
-                        Return to top
-                </button> */}
-            {/* </Layout> */}
+                <footer>
+                    <StyledFooter></StyledFooter>
+                </footer>
             </StyledMainPage>
         </>
     )

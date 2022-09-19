@@ -4,22 +4,36 @@ import { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components';
 
 const StyledSynthesizer = styled.div`
-  min-width: 720px;
+  //min-width: 720px;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  background-color: silver;
 `;
 
 const StyledColumnDiv = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
   border: 2px black solid;
-  flex-direction: row;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+
+  #knob1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+  }
+
+  #knob2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const StyledRowDiv = styled.div`
-  height: 200px;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -66,11 +80,15 @@ const GenericSlider = ({ label, belowLabel, ...options }) => {
     <StyledSynthesizer>
         <StyledRowDiv>
           <StyledColumnDiv>
-            <webaudio-knob ref={knob1} id="knob1"></webaudio-knob>
-            <br/>
-            {volume}
+
+            
           </StyledColumnDiv>
           <StyledColumnDiv>
+            <webaudio-knob ref={knob1} id="knob1" src={require('../assets/images/MiniMoog_Main.png')}></webaudio-knob>
+            <webaudio-knob  id="knob2" src={require('../assets/images/MiniMoog_Main.png')}></webaudio-knob>
+            <webaudio-knob  id="knob2" src={require('../assets/images/MiniMoog_Main.png')}></webaudio-knob>
+
+            {volume}
             {note}
           </StyledColumnDiv>
           <StyledColumnDiv>
@@ -80,7 +98,7 @@ const GenericSlider = ({ label, belowLabel, ...options }) => {
         </StyledRowDiv>
 
         <StyledRowDiv>
-          <webaudio-keyboard height="200" ref={kdb1} d="kbd"></webaudio-keyboard>
+          <webaudio-keyboard height={`${window.innerHeight*0.2}`} width='400' ref={kdb1} d="kbd"></webaudio-keyboard>
         </StyledRowDiv>
     </StyledSynthesizer>
   );

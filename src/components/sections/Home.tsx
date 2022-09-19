@@ -28,7 +28,7 @@ export const Home = () => {
   const [ isMounted, setIsMounted ] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() =>  setIsMounted(true), 1000);
+    const timeout = setTimeout(() =>  setIsMounted(true), 300);
     return () => clearTimeout(timeout);
   }, [])
   

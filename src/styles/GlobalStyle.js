@@ -34,6 +34,8 @@ const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         background-color: var(--primary-color);
         color: var(--font-color);
+        transition: all 0.5s ease;
+        font-family: Helvetica, sans-serif;
     }
 
     :root {

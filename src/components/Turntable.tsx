@@ -61,7 +61,6 @@ const Turntable: React.FC<ComponentProps> = () => {
 
 	const draw = (p5: p5Types) => {
         p5.clear()
-		//p5.background(0);
         
         let val = slider.value();
         
@@ -69,9 +68,10 @@ const Turntable: React.FC<ComponentProps> = () => {
 
         if (d < 300) {
             b = p5.atan2(p5.mouseY - p5.height / 2, p5.mouseX - p5.width / 2);
-        } else {
+        } else if (rotation == 1) {
             a += 3;
         }
+    
 
         Angle = a + b;
 
@@ -90,18 +90,18 @@ const Turntable: React.FC<ComponentProps> = () => {
 
     function mousePressed() {
 
-      }
+    }
 
-      function pause() {
-        if (mySound.isPlaying()) {
-            // .isPlaying() returns a boolean
-            mySound.pause();
-            rotation = 0;
-          } else {
-            mySound.loop(); // playback will resume from the pause position
-            rotation = 1;
-          }
-      }
+    function pause() {
+    if (mySound.isPlaying()) {
+        // .isPlaying() returns a boolean
+        mySound.pause();
+        rotation = 0;
+        } else {
+        mySound.loop(); // playback will resume from the pause position
+        rotation = 1;
+        }
+    }
 
 	return (
         <>

@@ -2,19 +2,25 @@ import { useRef, useState } from 'react';
 import { useTransition, animated } from 'react-spring';
 import useOnScreen from '../../hooks/useOnScreen'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const StyledProjectsSection = styled.section`
     margin: 0 auto;
     padding: 0 100px;
     display: flex;
-    height: auto;
+    height: 100%;
     max-width: 900px;
+`;
+
+const StyledProject = styled.div`
+    height: 200px;
+    width: auto;
 `;
 
 const Projects = () => {
 
     const ref: any = useRef();
-    const onScreen = useOnScreen(ref, "-300px")
+    // const onScreen = useOnScreen(ref, "-300px")
 
     // const items = onScreen ? [
     //     { x: -100, y: -100, delay: 200 },
@@ -40,7 +46,23 @@ const Projects = () => {
 
             <div className='projects' ref={ref}>
                 {/* {transition((style, item) => item ? <animated.div style={style} className='item' >number 1</animated.div> : '')} */}
+                <StyledProject>
+                    <h1><Link to="/Turntable">Turntable</Link></h1>
+                </StyledProject>
 
+                <StyledProject>
+                    <h1><Link to="/Chatroom">Chatroom</Link></h1>
+                </StyledProject>
+                <StyledProject>
+                    <h1><Link to="/ConnectFour">Connect Four</Link></h1>
+                </StyledProject>
+                <StyledProject>
+                    <h1><Link to="/Synthesizer">Synthesizer</Link></h1>
+                </StyledProject>
+                <StyledProject>
+                    <h1><Link to="/Spotify">Spotify</Link></h1>    
+                </StyledProject>
+                <StyledProject>Other stuff</StyledProject>
             </div>
         </div>
     </StyledProjectsSection>

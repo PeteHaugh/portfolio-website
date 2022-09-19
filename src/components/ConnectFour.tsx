@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
   width: 60vw;
   margin: 0 auto;
 
-  justify-content: space-between;
+  //justify-content: space-between;
 `;
 
 const StyledButtonRow = styled.div`
@@ -70,8 +70,8 @@ const StyledButton = styled.button`
 `;
 
 const StyledCell = styled.div`
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
   aspect-ratio: 1/1;
 `;
 
@@ -97,8 +97,6 @@ const ConnectFour = () => {
 
   return (
     <>
-      <h1>ConnectFour!</h1>
-
       <StyledWrapper>
         <StyledButtonRow>
             {columns.map((column) => (
