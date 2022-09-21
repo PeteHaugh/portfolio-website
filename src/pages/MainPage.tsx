@@ -2,21 +2,28 @@ import { useEffect } from 'react';
 import { Projects, Home, About, Navbar, Contact } from '../components';
 import styled from 'styled-components';
 import Turntable from '../components/Turntable';
+import { ArrowCircleUp } from 'phosphor-react';
 
 const StyledMainPage = styled.main`
     
+`;
+
+const StyledProject = styled.div`
+    position: absolute;
+    left: 50vw;
+    top: 20vh;
 `;
 
 const StyledSection = styled.div`
     width: 100%;
     height: 100vh;
     padding: 0 100px;
-    background: linear-gradient(#225794, #2f3e73);
+    /* background: linear-gradient(#225794, #2f3e73); */
 `;
 
 const StyledAbout = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding: 0 100px;
     background-color: aliceblue;
 `;
@@ -30,7 +37,7 @@ const StyledProjects = styled.div`
 const StyledFooter = styled.div`
     height: 200px;
     width: 100%;
-    background-color: red;
+    background-color: gray;
 `;
 
 
@@ -46,6 +53,9 @@ const MainPage = () => {
                 <Navbar />
                 <StyledSection id='home'>
                     <Home />
+                    <StyledProject >
+                        <Turntable />
+                    </StyledProject>
                 </StyledSection>
                 <StyledAbout id='about'>
                     <About />
@@ -57,7 +67,9 @@ const MainPage = () => {
                     <Contact />
                 </StyledSection>
                 <footer>
-                    <StyledFooter></StyledFooter>
+                    <StyledFooter>
+                        <a href="#home"><ArrowCircleUp size={48} /></a>
+                    </StyledFooter>
                 </footer>
             </StyledMainPage>
         </>

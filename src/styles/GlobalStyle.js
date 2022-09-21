@@ -19,9 +19,6 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
     }
 
-    ::-webkit-scrollbar {
-        width: 12px;
-    }
 
     body {
         margin: 0;

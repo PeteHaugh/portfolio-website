@@ -20,7 +20,7 @@ const linkStyle = {
 
 const TurntablePage = (props: Props) => {
   return (
-    <StyledProject id="canvasParent">
+    <StyledProject>
       <Turntable />
       <Link to="/" style={linkStyle}><SkipBack size={75} /></Link>
     </StyledProject>

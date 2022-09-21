@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import Turntable from '../Turntable';
 
 const StyledHomeSection = styled.section`
   -webkit-transform: translateY(-50%);
@@ -9,7 +10,8 @@ const StyledHomeSection = styled.section`
   position: absolute;
   text-align: left;
   top: 50%;
-  width: 100%;
+  width: 60%;
+  position: relative;
 
   h1 {
     margin: 0 0 30px 4px;
@@ -24,11 +26,15 @@ const StyledHomeSection = styled.section`
 
 `;
 
+const StyledProject = styled.div`
+
+`;
+
 export const Home = () => {
   const [ isMounted, setIsMounted ] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() =>  setIsMounted(true), 300);
+    const timeout = setTimeout(() =>  setIsMounted(true), 2000);
     return () => clearTimeout(timeout);
   }, [])
   
@@ -39,16 +45,23 @@ const three = <p>I'm an engineer with experience in a wide range of fields, spec
 const items = [one, two, three];
 
   return (
-    <StyledHomeSection>
-      <TransitionGroup component={null}>
-          {isMounted &&
-            items.map((item, i) => (
-              <CSSTransition key={i} classNames="fadein" timeout={2000}>
-                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-              </CSSTransition>
-            ))}
-        </TransitionGroup>
-    </StyledHomeSection>
+    <>
+      <StyledHomeSection>
+        <TransitionGroup component={null}>
+            {isMounted &&
+              items.map((item, i) => (
+                <CSSTransition key={i} classNames="fadein" timeout={2000}>
+                  <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+                </CSSTransition>
+              ))}
+              
+                
+
+          </TransitionGroup>
+
+      </StyledHomeSection>
+          
+        </>
   )
 }
 
