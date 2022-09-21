@@ -1,5 +1,5 @@
 .Navbar{
-    background: #212124;
+    background: var(--primary-color);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@
 
 .Navbar--hidden {
     top: -100px;
-    background: #212124;
+    background: var(--primary-color);
     height: 80px;
     display: flex;
     justify-content: center;
