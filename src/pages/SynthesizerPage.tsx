@@ -11,7 +11,7 @@ const SynthesizerPage = (props: Props) => {
     <>
       <h1>Synthesizer!</h1>
       <Synthesizer />
-      <Link to="/"><SkipBack size={100} /></Link>
+      <Link to="/#Projects"><SkipBack size={100} /></Link>
     </>
   )
 }

@@ -22,7 +22,7 @@ const TurntablePage = (props: Props) => {
   return (
     <StyledProject>
       <Turntable />
-      <Link to="/" style={linkStyle}><SkipBack size={75} /></Link>
+      <Link to="/#Projects" style={linkStyle}><SkipBack size={75} /></Link>
     </StyledProject>
   )
 }

@@ -70,10 +70,12 @@ const About = (props: Props) => {
                           <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
                       </CSSTransition>
                     ))}
-  
+                    <CSSTransition key={4} classNames="fadein" timeout={2000}>
+                      <img src={require('../../assets/images/Profile.JPG')} alt='Profile'/>
+                    </CSSTransition>
             </TransitionGroup>
         </div>
-        <img src={require('../../assets/images/Profile.JPG')} alt='Profile Picture'/>
+        
       </StyledAboutSection>
         
     </>

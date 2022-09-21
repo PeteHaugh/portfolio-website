@@ -16,7 +16,7 @@ const ConnectFourPage = (props: Props) => {
     <StyledPage>
       <h1>Connect Four!</h1>
       <ConnectFour />
-      <Link to="/"><SkipBack size={100} /></Link>
+      <Link to="/#Projects"><SkipBack size={100} /></Link>
     </StyledPage>
   )
 }

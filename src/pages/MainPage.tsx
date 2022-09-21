@@ -34,10 +34,17 @@ const StyledProjects = styled.div`
     padding: 0 100px;
 `;
 
+const StyledContact = styled.div`
+    height: 300px;
+    width: 100%;
+    padding: 0 100px;
+`;
+
 const StyledFooter = styled.div`
     height: 200px;
     width: 100%;
-    background-color: gray;
+    padding: 0 100px;
+    background-color: #212124;
 `;
 
 
@@ -51,26 +58,24 @@ const MainPage = () => {
         <>
             <StyledMainPage>
                 <Navbar />
-                <StyledSection id='home'>
+                <StyledSection id='Home'>
                     <Home />
                     <StyledProject >
                         <Turntable />
                     </StyledProject>
                 </StyledSection>
-                <StyledAbout id='about'>
+                <StyledAbout id='About'>
                     <About />
                 </StyledAbout >
-                <StyledProjects id='projects' >
+                <StyledProjects id='Projects' >
                     <Projects />
                 </StyledProjects>
-                <StyledSection id='contact' >
+                <StyledContact id='Contact' >
                     <Contact />
-                </StyledSection>
-                <footer>
-                    <StyledFooter>
-                        <a href="#home"><ArrowCircleUp size={48} /></a>
-                    </StyledFooter>
-                </footer>
+                </StyledContact>
+                <StyledFooter>
+                    <a href="#Home"><ArrowCircleUp size={48} /></a>
+                </StyledFooter>
             </StyledMainPage>
         </>
     )

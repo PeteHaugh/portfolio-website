@@ -32,7 +32,7 @@ const ChatroomPage = () => {
           <Header />
           <ChatHistory chatHistory={chatHistory} />
           <ChatInput send={send} />
-          <Link to="/"><SkipBack size={100} /></Link>
+          <Link to="/#Projects"><SkipBack size={100} /></Link>
         </div>
       )
 }
