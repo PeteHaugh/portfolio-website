@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Projects, Home, About, Navbar, Contact } from '../components';
 import styled from 'styled-components';
 import Turntable from '../components/Turntable';
-import { ArrowCircleUp } from 'phosphor-react';
+import { ArrowCircleUp, GithubLogo, LinkedinLogo } from 'phosphor-react';
 
 const StyledMainPage = styled.main`
     
@@ -75,6 +75,12 @@ const MainPage = () => {
                 </StyledContact>
                 <StyledFooter>
                     <a href="#Home"><ArrowCircleUp size={48} /></a>
+                    <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/peter-haugh-224548125'>
+                        <LinkedinLogo size={48} />
+                    </a>
+                    <a target='_blank' rel='noreferrer' href='https://github.com/PeteHaugh'>
+                        <GithubLogo size={48} />
+                    </a>
                 </StyledFooter>
             </StyledMainPage>
         </>

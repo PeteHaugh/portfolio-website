@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   border: 3px solid lightblue;
   height: 80vh;
-  width: 60vw;
+  width: 600px;
   margin: 0 auto;
 
   //justify-content: space-between;
@@ -55,21 +55,23 @@ const StyledColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc(60vw/6);
-  height: 100%;
+  align-items: center;
+  width: 100px;
+  height: 600px;
 `;
 
 const StyledButton = styled.button`
-  width: calc(60vw/6);
+  width: 100px;
   max-height: 50px;
   align-items: center;
   justify-content: space-between;
 `;
 
 const StyledCell = styled.div`
-  height: 100%;
-  width: auto;
+  height: 90px;
+  width: 90px;
   aspect-ratio: 1/1;
+  border: -2px solid;
 `;
 
 const ConnectFour = () => {

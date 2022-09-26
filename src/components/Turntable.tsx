@@ -15,7 +15,7 @@ const StyledTurntable = styled.div`
     height: 350px;
     background-color: gray;
     z-index: -1;
-    border-radius: 2px;
+    border-radius: px;
 `;
 
 const StyledProject = styled.div`
@@ -121,6 +121,7 @@ const Turntable: React.FC<ComponentProps> = () => {
             <StyledTurntable>
                 
             </StyledTurntable>
+            {/* <img src={require('../assets/images/g5519.jpg')} width="500"/> */}
         
         </StyledProject>
     );
