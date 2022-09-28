@@ -4,15 +4,16 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Turntable from '../Turntable';
 
 const StyledHomeSection = styled.section`
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding: 100px 100px;
+  /* -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); */
+  /* padding: 100px 100px;
   position: absolute;
   text-align: left;
   top: 50%;
-  width: 60%;
-  position: relative;
+  width: 60%; */
+  //position: relative;
 
+  min-width: 300px;
   h1 {
     margin: 0 0 30px 4px;
     font-size: 90px;

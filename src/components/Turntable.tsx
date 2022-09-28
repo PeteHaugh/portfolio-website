@@ -4,9 +4,17 @@ import Sketch from "react-p5";
 import p5Types from "p5"; //Import this for typechecking and intellisense
 import 'p5/lib/addons/p5.sound';
 import styled from 'styled-components';
+import { visitFunctionBody } from "typescript";
+
+const StyledImg = styled.img`
+    width: 700px;  
+    position: absolute;
+    left: 55vw;
+    top: 50px;
+`;
 
 const StyledTurntable = styled.div`
-    position: absolute;
+
     padding: 0;
     margin: 0;
     top: 50px;
@@ -51,16 +59,16 @@ const Turntable: React.FC<ComponentProps> = () => {
         mySound.loop();
         p5.angleMode(p5.DEGREES);
 
-        pizza = p5.loadImage("https://i.ibb.co/3cD6ZyW/vinyl.png");
+        pizza = p5.loadImage(require('../assets/images/turntable.webp'));
 
         button = p5.createButton('pause/play');
         button.parent("canvasParent");
-        button.position(110, 370,'absolute');
+        button.position(110, 370, 'static');
         button.mousePressed(pause);
 
         slider = p5.createSlider(0.5, 1.5, 1, 0.05);
         slider.parent("canvasParent");
-        slider.position(450, 350);
+        slider.position(450, 350, 'static');
         
         slider.style('width', '80px');
 
@@ -114,15 +122,16 @@ const Turntable: React.FC<ComponentProps> = () => {
     }
 
 	return (
-        <StyledProject id="canvasParent">
+        <StyledProject >
+            <StyledTurntable id="canvasParent">
 
-            <Sketch preload={preload} setup={setup} draw={draw} mousePressed={mousePressed}/>
-            
-            <StyledTurntable>
+                <Sketch preload={preload} setup={setup} draw={draw} mousePressed={mousePressed}/>
                 
+            
             </StyledTurntable>
-            {/* <img src={require('../assets/images/g5519.jpg')} width="500"/> */}
-        
+            <StyledImg src={require('../assets/images/body.webp')}/>
+            <StyledImg src={require('../assets/images/tonearm.webp')}/>
+            <StyledImg src={require('../assets/images/turntable.webp')}/>
         </StyledProject>
     );
 };

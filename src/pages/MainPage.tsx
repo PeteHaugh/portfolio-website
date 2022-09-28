@@ -8,16 +8,19 @@ const StyledMainPage = styled.main`
     
 `;
 
-const StyledProject = styled.div`
-    position: absolute;
-    left: 50vw;
-    top: 20vh;
+const StyledFlexWrapper = styled.div`
+    padding-top: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
 `;
 
-const StyledSection = styled.div`
+const StyledHome = styled.div`
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 100px;
+    
     /* background: linear-gradient(#225794, #2f3e73); */
 `;
 
@@ -58,12 +61,12 @@ const MainPage = () => {
         <>
             <StyledMainPage>
                 <Navbar />
-                <StyledSection id='Home'>
-                    <Home />
-                    <StyledProject >
+                <StyledHome id='Home'>
+                    <StyledFlexWrapper>
+                        <Home />
                         <Turntable />
-                    </StyledProject>
-                </StyledSection>
+                    </StyledFlexWrapper>
+                </StyledHome>
                 <StyledAbout id='About'>
                     <About />
                 </StyledAbout >

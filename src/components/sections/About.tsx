@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 type Props = {}
 
+
 const StyledAboutSection = styled.section`
   /* -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -15,7 +16,7 @@ const StyledAboutSection = styled.section`
   /* display: flex;
   flex-direction: row; */
   margin: 0 auto;
-
+  padding-top: 10%;
   display: flex;
   height: 100%;
   align-items: center;
@@ -31,12 +32,27 @@ const StyledAboutSection = styled.section`
     font-size: clamp(40px, 8vw, 60px);
   }
 
-  img {
+  /* img {
     width: 300px;
     overflow: hidden;
     object-fit: cover;
     flex-shrink: 0;
-  }
+    float: right;
+  } */
+`;
+
+const StyledImg = styled.img`
+  position: absolute;
+  width: 700px;
+  left: 75vw;
+  transform: rotate(20deg);
+`;
+
+const StyledImg2 = styled.img`
+  position: absolute;
+  width: 700px;
+  left: -10vw;
+  transform: rotate(20deg);
 `;
 
 
@@ -71,11 +87,12 @@ const About = (props: Props) => {
                       </CSSTransition>
                     ))}
                     <CSSTransition key={4} classNames="fadein" timeout={2000}>
-                      <img src={require('../../assets/images/Profile.JPG')} alt='Profile'/>
+                      <img width='300' src={require('../../assets/images/Profile.JPG')} alt='Profile'/>
                     </CSSTransition>
             </TransitionGroup>
         </div>
-        
+        <StyledImg src={require('../../assets/images/headphones.webp')}/>
+        <StyledImg2 src={require('../../assets/images/coffee.webp')}/>
       </StyledAboutSection>
         
     </>
