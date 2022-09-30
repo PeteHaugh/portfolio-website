@@ -33,6 +33,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             
+            <Route path="/Turntable" element={<TurntablePage />} /> 
             <Route path="/ConnectFour" element={<ConnectFourPage />} />
             <Route path="/Chatroom" element={<ChatroomPage />} />
             <Route path="/Spotify" element={<SpotifyPage />} />

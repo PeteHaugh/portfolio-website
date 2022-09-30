@@ -9,17 +9,17 @@ const StyledMainPage = styled.main`
 `;
 
 const StyledFlexWrapper = styled.div`
-    padding-top: 15%;
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-around;
 `;
 
 const StyledHome = styled.div`
     width: 100%;
     min-height: 100vh;
-    padding: 0 100px;
+    padding: 20px 100px;
     
     /* background: linear-gradient(#225794, #2f3e73); */
 `;
@@ -60,7 +60,7 @@ const MainPage = () => {
     return (
         <>
             <StyledMainPage>
-                <Navbar />
+                {/* <Navbar /> */}
                 <StyledHome id='Home'>
                     <StyledFlexWrapper>
                         <Home />

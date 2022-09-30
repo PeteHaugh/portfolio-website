@@ -1,23 +1,17 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Turntable from '../Turntable';
 
 const StyledHomeSection = styled.section`
-  /* -webkit-transform: translateY(-50%);
-  transform: translateY(-50%); */
-  /* padding: 100px 100px;
-  position: absolute;
-  text-align: left;
-  top: 50%;
-  width: 60%; */
-  //position: relative;
 
-  min-width: 300px;
+  min-width: 400px;
+  width: 600px;
+  min-height: 100px;
+
   h1 {
     margin: 0 0 30px 4px;
     font-size: 90px;
-    color: var(--heading-color)
+    color: var(--heading-color);
   }
 
   .big-heading {
@@ -27,15 +21,12 @@ const StyledHomeSection = styled.section`
 
 `;
 
-const StyledProject = styled.div`
-
-`;
 
 export const Home = () => {
   const [ isMounted, setIsMounted ] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() =>  setIsMounted(true), 2000);
+    const timeout = setTimeout(() =>  setIsMounted(true), 1000);
     return () => clearTimeout(timeout);
   }, [])
   

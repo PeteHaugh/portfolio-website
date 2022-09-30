@@ -44,14 +44,14 @@ const StyledAboutSection = styled.section`
 const StyledImg = styled.img`
   position: absolute;
   width: 700px;
-  left: 75vw;
+  left: 1500px;
   transform: rotate(20deg);
 `;
 
 const StyledImg2 = styled.img`
   position: absolute;
   width: 700px;
-  left: -10vw;
+  left: -200px;
   transform: rotate(20deg);
 `;
 
@@ -86,9 +86,9 @@ const About = (props: Props) => {
                           <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
                       </CSSTransition>
                     ))}
-                    <CSSTransition key={4} classNames="fadein" timeout={2000}>
-                      <img width='300' src={require('../../assets/images/Profile.JPG')} alt='Profile'/>
-                    </CSSTransition>
+                    {/* <CSSTransition key={4} classNames="fadein" timeout={2000}>
+                      <img width='300' src={require('../../assets/images/Profile.JPG')} alt='Profile'/> 
+                    </CSSTransition> */}
             </TransitionGroup>
         </div>
         <StyledImg src={require('../../assets/images/headphones.webp')}/>
