@@ -11,7 +11,32 @@ const StyledContactSection = styled.section`
   margin: 0 auto;
   padding: 0 100px;
   max-width: 900px;
+  height: 100%;
+  position: relative;
+
+  h1 {
+        margin: 0 0 30px 4px;
+        font-size: 50px;
+        color: var(--heading-color)
+    }
+
+    li {
+        list-style: none;
+    }
+
+    input {
+        width: 60%;
+    }
 `;
+
+const StyledImg = styled.img`
+  position: absolute;
+  width: 800px;
+  left: 800px;
+  transform: rotate(-30deg);
+  top: -100px;
+`;
+
 
 const Contact = (props: Props) => {
 
@@ -61,8 +86,9 @@ const Contact = (props: Props) => {
                   </li>
               </ul>
           </form>
-
+          
       </div>
+      <StyledImg src={require('../../assets/images/headphones.webp')}/>
     </StyledContactSection>
   )
 }

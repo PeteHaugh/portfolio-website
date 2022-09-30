@@ -20,8 +20,6 @@ const StyledHome = styled.div`
     width: 100%;
     min-height: 100vh;
     padding: 20px 100px;
-    
-    /* background: linear-gradient(#225794, #2f3e73); */
 `;
 
 const StyledAbout = styled.div`
@@ -38,7 +36,7 @@ const StyledProjects = styled.div`
 `;
 
 const StyledContact = styled.div`
-    height: 300px;
+    height: 80vh;
     width: 100%;
     padding: 0 100px;
 `;

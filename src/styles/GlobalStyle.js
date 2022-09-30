@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components/macro';
 import TransitionStyles from './TransitionsStyles';
 import variables from './variables';
+import LeagueSpartanBlack from '../fonts/LeagueSpartan-Black.ttf';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -32,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--primary-color);
         color: var(--font-color);
         transition: all 0.5s ease;
-        font-family: Helvetica, sans-serif;
+        font-family: 'LeagueSpartanBlack', 'Helvetica', sans-serif;
     }
 
     :root {

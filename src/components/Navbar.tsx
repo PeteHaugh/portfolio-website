@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import '../styles/Navbar.css';
 
 const StyledNavBar = styled.nav`
-    width: 100%;
+    width: 50%;
 `;
 
 const Navbar = () => {
@@ -17,11 +17,11 @@ const Navbar = () => {
 
     return (
         <nav className={scrollDirection === "down" ? "Navbar--hidden" : "Navbar"}>
-            <h1 className='navbar-logo'>P</h1>
-            <div className='menu-icon' onClick={() => setClicked(!clicked)}>
+            {/* <h1 className='navbar-logo'>P</h1> */}
+            {/* <div className='menu-icon' onClick={() => setClicked(!clicked)}>
                 <i className={clicked ? "ph-x" : "ph-list"}></i>
 
-            </div>
+            </div> */}
             <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
                 {NavItems.map((item, index) => {
                     return (

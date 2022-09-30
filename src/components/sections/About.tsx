@@ -44,16 +44,11 @@ const StyledAboutSection = styled.section`
 const StyledImg = styled.img`
   position: absolute;
   width: 700px;
-  left: 1500px;
-  transform: rotate(20deg);
-`;
-
-const StyledImg2 = styled.img`
-  position: absolute;
-  width: 700px;
   left: -200px;
   transform: rotate(20deg);
 `;
+
+
 
 
 
@@ -91,8 +86,8 @@ const About = (props: Props) => {
                     </CSSTransition> */}
             </TransitionGroup>
         </div>
-        <StyledImg src={require('../../assets/images/headphones.webp')}/>
-        <StyledImg2 src={require('../../assets/images/coffee.webp')}/>
+        
+        <StyledImg src={require('../../assets/images/coffee.webp')}/>
       </StyledAboutSection>
         
     </>
