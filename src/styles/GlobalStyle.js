@@ -1,7 +1,6 @@
-import { createGlobalStyle } from 'styled-components/macro';
-import TransitionStyles from './TransitionsStyles';
-import variables from './variables';
-import LeagueSpartanBlack from '../fonts/LeagueSpartan-Black.ttf';
+import { createGlobalStyle } from "styled-components/macro";
+import TransitionStyles from "./TransitionsStyles";
+import variables from "./variables";
 
 const GlobalStyle = createGlobalStyle`
 

@@ -1,19 +1,20 @@
-import { 
-  BrowserRouter as Router, 
-  Routes, 
-  Route, 
-  useLocation 
-} from 'react-router-dom';
-import { GlobalStyle } from './styles';
-import { useLayoutEffect } from 'react';
-import { 
-  TurntablePage, 
-  ConnectFourPage, 
-  ChatroomPage, 
-  SpotifyPage, 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { GlobalStyle } from "./styles";
+import { useLayoutEffect, useState } from "react";
+import {
+  TurntablePage,
+  ConnectFourPage,
+  ChatroomPage,
   SynthesizerPage,
-  MainPage
-} from './pages';
+  MainPage,
+} from "./pages";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/theme";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -21,28 +22,25 @@ const ScrollToTop = () => {
     document.documentElement.scrollTo(0, 0);
   }, [pathname]);
   return null;
-} 
+};
 
 const App: React.FC = () => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
 
-        <Router>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            
-            <Route path="/Turntable" element={<TurntablePage />} /> 
-            <Route path="/ConnectFour" element={<ConnectFourPage />} />
-            <Route path="/Chatroom" element={<ChatroomPage />} />
-            <Route path="/Spotify" element={<SpotifyPage />} />
-            <Route path="/Synthesizer" element={<SynthesizerPage />} />
-          </Routes>
-        </Router>
-      
-    </>
+          <Route path="/Turntable" element={<TurntablePage />} />
+          <Route path="/ConnectFour" element={<ConnectFourPage />} />
+          <Route path="/Chatroom" element={<ChatroomPage />} />
+          <Route path="/Synthesizer" element={<SynthesizerPage />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
