@@ -133,7 +133,7 @@ const StyledForm = styled.form`
     color: white;
     font-weight: 700;
     padding: 4px 2px;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     width: 12rem;
     margin: 0 auto;
 
@@ -189,5 +189,5 @@ const StyledImg = styled.img`
   width: 800px;
   left: 800px;
   transform: rotate(-30deg);
-  top: -200px;
+  top: -300px;
 `;

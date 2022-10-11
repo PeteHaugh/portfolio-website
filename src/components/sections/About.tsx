@@ -24,7 +24,7 @@ const About = () => {
 export default About;
 
 const AboutText = styled.div`
-  flex: 1;
+  width: 70vw;
 
   > h1 {
     margin: 0 0 30px 4px;
@@ -53,6 +53,6 @@ const StyledImg = styled.img`
   width: 700px;
   position: absolute;
   top: -200px;
-  left: -200px;
-  transform: rotate(20deg);
+  left: -500px;
+  transform: rotate(30deg);
 `;
