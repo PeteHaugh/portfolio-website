@@ -11,3 +11,4 @@ export { default as Message } from './Chatroom/Message';
 
 export { default as Burger } from './Burger';
 export { default as Menu } from './Menu'
+export { default as Footer } from './sections/Footer'
