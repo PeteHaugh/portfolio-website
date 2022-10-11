@@ -15,6 +15,7 @@ const About = () => {
         </AboutText>
         <ImgContainer>
           <StyledImg src={require("../../assets/images/coffee.webp")} />
+          <StyledShadow src={require("../../assets/images/MugShade.webp")}/>
         </ImgContainer>
       </StyledAboutSection>
     </>
@@ -31,6 +32,7 @@ const AboutText = styled.div`
     font-size: 50px;
     color: var(--heading-color);
     font-size: clamp(40px, 8vw, 60px);
+    text-shadow: 5px 5px 0 #bcbcbc;
   }
 `;
 
@@ -55,4 +57,14 @@ const StyledImg = styled.img`
   top: -200px;
   left: -500px;
   transform: rotate(30deg);
+  z-index: 2;
+`;
+
+const StyledShadow = styled.img`
+  width: 700px;
+  position: absolute;
+  top: -170px;
+  left: -480px;
+  transform: rotate(30deg);
+  z-index: 1;
 `;

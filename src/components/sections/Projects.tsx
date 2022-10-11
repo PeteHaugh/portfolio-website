@@ -145,7 +145,7 @@ const Projects = () => {
 export default Projects;
 
 const TextDiv = styled.div`
-  padding-right: 10px;
+  padding: 10px;
   flex: 0.4;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@ const ImageDiv = styled.div`
 `;
 
 const StyledProject = styled.div`
-  padding: 20px 0;
+  padding: 20px;
   height: auto;
   width: 100%;
   display: flex;
@@ -188,11 +188,12 @@ const StyledProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 900px;
+  max-width: 1200px;
 
   h1 {
     margin: 0 0 30px 4px;
     font-size: 50px;
     color: var(--heading-color);
+    text-shadow: 5px 5px 0 #bcbcbc;
   }
 `;

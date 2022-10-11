@@ -48,6 +48,8 @@ const StyledHomeSection = styled.section`
     margin: 0 0 30px 4px;
     font-size: 90px;
     color: var(--heading-color);
+    text-shadow: 5px 5px 0 #bcbcbc;
+
   }
 
   .big-heading {

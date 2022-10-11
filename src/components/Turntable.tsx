@@ -5,25 +5,6 @@ import p5Types from "p5"; //Import this for typechecking and intellisense
 import "p5/lib/addons/p5.sound";
 import styled from "styled-components";
 
-const StyledImg = styled.img`
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-`;
-
-const StyledImgArm = styled.img`
-  width: 85%;
-  margin-left: 75px;
-  margin-top: 30px;
-`;
-
-const StyledTurntable = styled.div`
-  padding: 0;
-  margin: 0;
-  width: 700px;
-  height: 880px;
-  position: relative;
-`;
 
 const Turntable: React.FC<ComponentProps> = () => {
   let a = 0;
@@ -191,9 +172,37 @@ const Turntable: React.FC<ComponentProps> = () => {
           mouseReleased={mouseReleased}
         />
         <StyledImg src={require("../assets/images/body.webp")} />
+        <StyledShadow src={require("../assets/images/TurntableShade.webp")}/>
       </StyledTurntable>
     </>
   );
 };
 
 export default Turntable;
+
+const StyledShadow = styled.img`
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -2;
+`;
+const StyledImg = styled.img`
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+`;
+
+const StyledImgArm = styled.img`
+  width: 85%;
+  margin-left: 75px;
+  margin-top: 30px;
+`;
+
+const StyledTurntable = styled.div`
+  padding: 0;
+  margin: 0;
+  width: 700px;
+  height: 880px;
+  position: relative;
+`;
