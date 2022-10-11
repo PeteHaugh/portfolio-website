@@ -42,7 +42,7 @@ const Projects = () => {
         </ImageDiv>
       </StyledProject>
 
-      <StyledProject>
+      <StyledProjectRev>
         <TextDiv>
           <h2>
             <a
@@ -71,7 +71,7 @@ const Projects = () => {
         <ImageDiv>
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
-      </StyledProject>
+      </StyledProjectRev>
 
       <StyledProject>
         <TextDiv>
@@ -180,6 +180,14 @@ const StyledProject = styled.div`
   height: auto;
   width: 100%;
   display: flex;
+`;
+
+const StyledProjectRev = styled.div`
+  padding: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 `;
 
 const StyledProjectsSection = styled.section`
