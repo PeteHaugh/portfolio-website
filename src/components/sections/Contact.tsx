@@ -35,7 +35,6 @@ const Contact = () => {
         "WiovkUVi5h5m0AwN9"
       )
       .then(() => {
-        // window.location.reload(false);
         setSubmitted(true);
       })
       .catch((error) => {
@@ -54,13 +53,6 @@ const Contact = () => {
         </ThanksDiv>
       ) : (
         <StyledForm id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-          <h3 className="text-sm text-yellow-500">
-            Feel free to get in contact!
-          </h3>
-          <h4 className="text-3xl font-bold">Leave a comment below!</h4>
-          <hr />
-          {/* className="py-3 mt-2" */}
-
           <label>
             <input
               {...register("name", { required: true })}
@@ -121,7 +113,6 @@ const StyledForm = styled.form`
   padding: 10px;
   max-width: 48rem;
   margin: 0 auto;
-  margin-bottom: 10px;
 
   > h3 {
     font-size: 1.875rem;
@@ -131,7 +122,6 @@ const StyledForm = styled.form`
   }
 
   > label {
-    display: block;
     margin-bottom: 5px;
   }
 
@@ -150,7 +140,6 @@ const StyledForm = styled.form`
     }
 
     &:focus {
-      box-shadow: 0 0 5px gray;
       outline: none;
     }
   }
@@ -158,17 +147,13 @@ const StyledForm = styled.form`
   > label > input,
   textarea {
     outline: none;
-    border-style: 3px solid lightgray;
-    border-radius: 0.25rem;
-    padding: 3px 2px;
-    margin-top: 1px;
-    display: block;
+    padding: 8px 12px;
+    margin-bottom: 1rem;
     width: 100%;
 
     &:focus {
       outline: none !important;
-      border: 3px solid var(--heading-color);
-      box-shadow: 0 0 5px gray;
+      border: 1px solid var(--heading-color);
     }
   }
 `;
@@ -177,10 +162,10 @@ const StyledContactSection = styled.section`
   max-width: 48rem;
   margin: 0 auto;
   padding: 5px;
-  height: 80vh;
+  height: 60vh;
 
   > h1 {
-    margin: 0;
+    margin: 20px 0;
     font-size: 50px;
     color: var(--heading-color);
   }

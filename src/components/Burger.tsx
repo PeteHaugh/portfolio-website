@@ -1,42 +1,35 @@
 // @ts-nocheck
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
-import { theme } from "../styles/theme";
-
-
-//{ open, setOpen }: Props
 
 function Burger() {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
     <>
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div></div>
-      <div></div>
-      <div></div>
-    </StyledBurger>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </StyledBurger>
 
-<StyledMenu open={open}>
-<a href="/#About">
-  About
-</a>
-<a href="/#Projects">
-  Projects
-</a>
-<a href="/#Contact">
-  Contact
-</a>
-</StyledMenu>
-</>
+      <StyledMenu open={open} onClick={() => setOpen(!open)}>
+        <a href="/#About">About</a>
+        <a href="/#Projects">Projects</a>
+        <a href="/#Contact">Contact</a>
+      </StyledMenu>
+      <BlurDiv open={open}></BlurDiv>
+    </>
   );
 }
 
 export default Burger;
 
+
+
 const StyledBurger = styled.button`
-  position: absolute;
-  top: 5%;
+  position: fixed;
+  top: 2rem;
   left: 2rem;
   display: flex;
   flex-direction: column;
@@ -57,7 +50,7 @@ const StyledBurger = styled.button`
     width: 2rem;
     height: 0.25rem;
     background: ${({ theme, open }) =>
-      open ? theme.primaryDark : theme.primaryLight};
+      open ? theme.primaryDark : theme.primaryDark};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -83,14 +76,15 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: left;
   padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  z-index: 8;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
@@ -111,4 +105,17 @@ const StyledMenu = styled.nav`
       color: ${({ theme }) => theme.primaryHover};
     }
   }
+`;
+
+const BlurDiv = styled.div`
+  background-color: white;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  opacity: ${({ open }) => (open ? 0.7 : 0)};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transition: opacity 0.3s linear;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
 `;

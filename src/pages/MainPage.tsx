@@ -2,7 +2,6 @@
 import { Projects, Home, About, Contact, Burger, Footer } from "../components";
 import styled from "styled-components";
 import Turntable from "../components/Turntable";
-import { ArrowCircleUp, GithubLogo, LinkedinLogo } from "phosphor-react";
 
 const MainPage = () => {
   
@@ -50,10 +49,7 @@ const StyledHome = styled.div`
 `;
 
 const StyledAbout = styled.div`
-  width: 100%;
-  min-height: 80vh;
-  padding: 0 100px;
-  background-color: aliceblue;
+  
 `;
 
 const StyledProjects = styled.div`
