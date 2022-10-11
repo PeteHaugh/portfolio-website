@@ -43,6 +43,7 @@ const Contact = () => {
   };
 
   return (
+    <>
     <StyledContactSection>
       <h1>Contact</h1>
 
@@ -84,9 +85,10 @@ const Contact = () => {
           <input type="submit" />
         </StyledForm>
       )}
-      {/* </div> */}
+      <StyledImg src={require("../../assets/images/headphones.webp")} />
     </StyledContactSection>
-    //   <StyledImg src={require("../../assets/images/headphones.webp")} />
+      
+      </>
   );
 };
 
@@ -163,6 +165,7 @@ const StyledContactSection = styled.section`
   margin: 0 auto;
   padding: 5px;
   height: 60vh;
+  position: relative;
 
   > h1 {
     margin: 20px 0;
@@ -186,5 +189,5 @@ const StyledImg = styled.img`
   width: 800px;
   left: 800px;
   transform: rotate(-30deg);
-  top: -100px;
+  top: -200px;
 `;

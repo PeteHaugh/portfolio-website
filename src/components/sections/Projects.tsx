@@ -4,25 +4,7 @@ import useOnScreen from "../../hooks/useOnScreen";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const StyledProjectsSection = styled.section`
-  margin: 0 auto;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-width: 900px;
 
-  h1 {
-    margin: 0 0 30px 4px;
-    font-size: 50px;
-    color: var(--heading-color);
-  }
-`;
-
-const StyledProject = styled.div`
-  height: 200px;
-  width: 100%;
-`;
 
 const Projects = () => {
   return (
@@ -77,3 +59,24 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+const StyledProjectsSection = styled.section`
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 900px;
+
+  h1 {
+    margin: 0 0 30px 4px;
+    font-size: 50px;
+    color: var(--heading-color);
+  }
+`;
+
+const StyledProject = styled.div`
+  height: 200px;
+  width: 100%;
+`;

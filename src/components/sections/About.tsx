@@ -24,7 +24,7 @@ const About = () => {
 export default About;
 
 const AboutText = styled.div`
-  flex: 0.7;
+  flex: 1;
 
   > h1 {
     margin: 0 0 30px 4px;
