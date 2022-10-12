@@ -40,7 +40,6 @@ export const Home = () => {
 export default Home;
 
 const StyledHomeSection = styled.section`
-  min-width: 400px;
   width: 600px;
   min-height: 100px;
 
@@ -49,11 +48,18 @@ const StyledHomeSection = styled.section`
     font-size: 90px;
     color: var(--heading-color);
     text-shadow: 5px 5px 0 #bcbcbc;
-
   }
 
   .big-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 100px);
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;

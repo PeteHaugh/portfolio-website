@@ -25,8 +25,6 @@ function Burger() {
 
 export default Burger;
 
-
-
 const StyledBurger = styled.button`
   position: fixed;
   top: 2rem;

@@ -6,7 +6,6 @@ const Projects = () => {
   return (
     <StyledProjectsSection>
       <h1>Projects</h1>
-
       <StyledProject>
         <TextDiv>
           <h2>
@@ -41,7 +40,6 @@ const Projects = () => {
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
       </StyledProject>
-
       <StyledProjectRev>
         <TextDiv>
           <h2>
@@ -72,7 +70,6 @@ const Projects = () => {
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
       </StyledProjectRev>
-
       <StyledProject>
         <TextDiv>
           <h2>
@@ -81,7 +78,7 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Connect Four
+              Cooking Blog
             </a>
           </h2>
 
@@ -103,11 +100,10 @@ const Projects = () => {
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
       </StyledProject>
-
       <StyledProject>
         <TextDiv>
           <h2>
-            <Link to="/Synthesizer">Synthesizer</Link>
+            <Link to="/ConnectFour">Connect Four</Link>
           </h2>
 
           <p>
@@ -132,12 +128,12 @@ const Projects = () => {
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
       </StyledProject>
-
       <h2>Other noteworthy projects</h2>
-
-      <StyledProject>MATLAB</StyledProject>
-      <StyledProject>Works in Progress</StyledProject>
-      <StyledProject>Works in Progress</StyledProject>
+      <OtherProjectDiv>
+        <OtherProject>MATLAB</OtherProject>
+        <OtherProject>MATLAB</OtherProject>
+        <OtherProject>MATLAB</OtherProject>
+      </OtherProjectDiv>
     </StyledProjectsSection>
   );
 };
@@ -145,10 +141,14 @@ const Projects = () => {
 export default Projects;
 
 const TextDiv = styled.div`
-  padding: 10px;
+  padding-bottom: 10px;
   flex: 0.4;
   display: flex;
   flex-direction: column;
+
+  > h2 {
+    margin-top: 0;
+  }
 
   > ul {
     display: flex;
@@ -172,14 +172,16 @@ const ImageDiv = styled.div`
   flex: 0.6;
   > img {
     width: 100%;
+    min-width: 300px;
   }
 `;
 
 const StyledProject = styled.div`
-  padding: 20px;
+  margin: 50px;
   height: auto;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const StyledProjectRev = styled.div`
@@ -199,9 +201,23 @@ const StyledProjectsSection = styled.section`
   max-width: 1200px;
 
   h1 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 4px 4px;
     font-size: 50px;
     color: var(--heading-color);
     text-shadow: 5px 5px 0 #bcbcbc;
   }
+`;
+
+const OtherProjectDiv = styled.div`
+  list-style: none;
+  padding: 0px;
+  margin: 50px 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  position: relative;
+`;
+const OtherProject = styled.div`
+  background-color: aliceblue;
+  height: 300px;
 `;

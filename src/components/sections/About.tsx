@@ -44,6 +44,7 @@ const StyledAboutSection = styled.section`
   align-items: center;
   position: relative;
   flex-direction: row-reverse;
+  box-shadow: 0 3px 3px lightgray, 0 -3px 3px lightgray;
 `;
 
 const ImgContainer = styled.div`

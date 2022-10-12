@@ -4,7 +4,7 @@ import Sketch from "react-p5";
 import p5Types from "p5"; //Import this for typechecking and intellisense
 import "p5/lib/addons/p5.sound";
 import styled from "styled-components";
-
+import { X } from "phosphor-react";
 
 const Turntable: React.FC<ComponentProps> = () => {
   let a = 0;
@@ -27,6 +27,7 @@ const Turntable: React.FC<ComponentProps> = () => {
   let boxWidth = 30;
   let boxHeight = 50;
   let range = 100;
+  let size = 1;
 
   const preload = (p5: p5Types, canvasParent: Element) => {
     p5.soundFormats("mp3", "ogg");
@@ -39,24 +40,40 @@ const Turntable: React.FC<ComponentProps> = () => {
   };
 
   const setup = (p5: p5Types, canvasParentRef: Element) => {
-    canvas = p5.createCanvas(700, 880, "relative").parent("canvasParent");
-    
+    if (p5.windowWidth < 1024) {
+      size = 0.5;
+    } else if (p5.windowWidth < 1536) {
+      size = 0.7;
+    } else {
+      size = 1;
+    }
 
+    canvas = p5
+      .createCanvas(700 * size, 880 * size, "relative")
+      .parent("canvasParent");
+    p5.pixelDensity(1);
     mySound.loop();
     p5.angleMode(p5.DEGREES);
 
     p5.rectMode(p5.CENTER);
     p5.frameRate(120);
 
-    bx = 480;
-    by = 23;
+    bx = 480 * size;
+    by = 23 * size;
   };
 
   const draw = (p5: p5Types) => {
+    if (p5.windowWidth < 1024) {
+      size = 0.5;
+    } else if (p5.windowWidth < 1536) {
+      size = 0.7;
+    } else {
+      size = 1;
+    }
     p5.clear();
     p5.push();
-    range = p5.constrain(bx, 380, 580);
-    let val = range / 480;
+    range = p5.constrain(bx, 380 * size, 580 * size);
+    let val = (range / 480) * size;
 
     let d = p5.dist(p5.mouseX, p5.mouseY, 350, 440);
 
@@ -71,11 +88,11 @@ const Turntable: React.FC<ComponentProps> = () => {
     }
 
     Angle = a + b;
-    AngleV = (Angle - AngleOld) / (1 / 60);
+    AngleV = (Angle - AngleOld) / (1 / 60) / size ** 2;
 
-    p5.translate(p5.width / 2, 500);
+    p5.translate(p5.width / 2, 500 * size);
     p5.rotate(a * val + b);
-    p5.image(record, -325, -325, 650, 650);
+    p5.image(record, -325 * size, -325 * size, 650 * size, 650 * size);
     p5.pop();
 
     let speed = (AngleV / 180) * val;
@@ -94,34 +111,34 @@ const Turntable: React.FC<ComponentProps> = () => {
         toneAngle -= 2;
       }
     }
-    p5.translate(170, 120);
+    p5.translate(170 * size, 120 * size);
     p5.rotate(toneAngle);
-    p5.image(tonearm, -95, -95, 595, 190);
+    p5.image(tonearm, -95 * size, -95 * size, 595 * size, 190 * size);
 
     p5.pop();
 
     p5.push();
 
     if (
-      p5.mouseX > bx - boxWidth &&
-      p5.mouseX < bx + boxWidth &&
-      p5.mouseY > by - boxHeight &&
-      p5.mouseY < by + boxHeight
+      p5.mouseX > bx - boxWidth * size &&
+      p5.mouseX < bx + boxWidth * size &&
+      p5.mouseY > by - boxHeight * size &&
+      p5.mouseY < by + boxHeight * size
     ) {
       overBox = true;
     } else {
       overBox = false;
     }
 
-    p5.translate(range, 23);
+    p5.translate(range, 23 * size);
 
-    p5.image(sliderKnob, 0, 0, 30, 50);
+    p5.image(sliderKnob, 0, 0, 30 * size, 50 * size);
     p5.pop();
 
     p5.push();
     p5.noStroke();
-    p5.fill(160, 173, 173);
-    p5.rect(70, 810, 100, 100, 5);
+    p5.fill(211, 216, 215);
+    p5.rect(70 * size, 810 * size, 100 * size, 100 * size, 5 * size);
 
     p5.pop();
   };
@@ -133,15 +150,15 @@ const Turntable: React.FC<ComponentProps> = () => {
       locked = false;
     }
     xOffset = p5.mouseX - bx;
-    let f = p5.dist(p5.mouseX, p5.mouseY, 75, 805);
-    if (f < 50) {
+    let f = p5.dist(p5.mouseX, p5.mouseY, 75 * size, 805 * size);
+    if (f < 50 * size) {
       pause();
     }
   }
 
   function mouseDragged(p5: p5Types) {
     if (locked) {
-      bx = p5.mouseX - xOffset;
+      bx = p5.mouseX - xOffset * size;
     }
   }
 
@@ -160,6 +177,21 @@ const Turntable: React.FC<ComponentProps> = () => {
     }
   }
 
+  function windowResized(p5) {
+    if (p5.windowWidth < 1024) {
+      size = 0.5;
+      xOffset = 0.0;
+    } else if (p5.windowWidth < 1536) {
+      size = 0.7;
+      xOffset = 0.0;
+    } else {
+      size = 1;
+    }
+    p5.resizeCanvas(700 * size, 880 * size, true);
+    bx = 480 * size;
+    by = 23 * size;
+  }
+
   return (
     <>
       <StyledTurntable id="canvasParent">
@@ -170,9 +202,10 @@ const Turntable: React.FC<ComponentProps> = () => {
           mousePressed={mousePressed}
           mouseDragged={mouseDragged}
           mouseReleased={mouseReleased}
+          windowResized={windowResized}
         />
         <StyledImg src={require("../assets/images/body.webp")} />
-        <StyledShadow src={require("../assets/images/TurntableShade.webp")}/>
+        <StyledShadow src={require("../assets/images/TurntableShade.webp")} />
       </StyledTurntable>
     </>
   );
@@ -193,16 +226,20 @@ const StyledImg = styled.img`
   z-index: -1;
 `;
 
-const StyledImgArm = styled.img`
-  width: 85%;
-  margin-left: 75px;
-  margin-top: 30px;
-`;
-
 const StyledTurntable = styled.div`
   padding: 0;
   margin: 0;
   width: 700px;
   height: 880px;
   position: relative;
+
+  @media screen and (max-width: 1536px) {
+    width: calc(700px * 0.7);
+    height: calc(880px * 0.7);
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: calc(700px * 0.5);
+    height: calc(880px * 0.5);
+  }
 `;

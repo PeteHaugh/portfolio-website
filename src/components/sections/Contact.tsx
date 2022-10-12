@@ -190,4 +190,5 @@ const StyledImg = styled.img`
   left: 800px;
   transform: rotate(-30deg);
   top: -300px;
+  overflow: hidden;
 `;
