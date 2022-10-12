@@ -86,6 +86,7 @@ const Contact = () => {
         </StyledForm>
       )}
       <StyledImg src={require("../../assets/images/headphones.webp")} />
+      <StyledShadow src={require("../../assets/images/HeadphoneShade.webp")} />
     </StyledContactSection>
       
       </>
@@ -191,4 +192,15 @@ const StyledImg = styled.img`
   transform: rotate(-30deg);
   top: -300px;
   overflow: hidden;
+  z-index: 10;
+`;
+
+const StyledShadow = styled.img`
+ position: absolute;
+  width: 800px;
+  left: 810px;
+  transform: rotate(-30deg);
+  top: -290px;
+  overflow: hidden;
+  z-index: 9;
 `;

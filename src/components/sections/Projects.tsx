@@ -145,6 +145,7 @@ const TextDiv = styled.div`
   flex: 0.4;
   display: flex;
   flex-direction: column;
+  justify-content: space-around
 
   > h2 {
     margin-top: 0;
