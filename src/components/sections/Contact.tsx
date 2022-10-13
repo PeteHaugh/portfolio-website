@@ -99,7 +99,6 @@ const ThanksDiv = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 10px;
-  color: white;
   max-width: 48rem;
   margin: 0 auto;
 
@@ -136,10 +135,12 @@ const StyledForm = styled.form`
     padding: 4px 2px;
     border-radius: 0.5rem;
     width: 12rem;
-    margin: 0 auto;
+    margin: 20px auto;
+
 
     &:hover {
-      background-color: red;
+      transition: all 0.2s ease-in-out;
+      transform: scale(0.95);
     }
 
     &:focus {
@@ -172,14 +173,16 @@ const StyledContactSection = styled.section`
     margin: 20px 0;
     font-size: 50px;
     color: var(--heading-color);
+    text-shadow: 5px 5px 0 #bcbcbc;
   }
 `;
 
 const ErrorDiv = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 5px;
-
+  justify-content: space-around;
+  
   > span {
     color: red;
   }
@@ -193,6 +196,14 @@ const StyledImg = styled.img`
   top: -300px;
   overflow: hidden;
   z-index: 10;
+
+  @media screen and (max-width: 1024px) {
+    left: 900px;
+  }
+
+  @media screen and (max-width: 512px) {
+    display: none;
+  }
 `;
 
 const StyledShadow = styled.img`
@@ -203,4 +214,12 @@ const StyledShadow = styled.img`
   top: -290px;
   overflow: hidden;
   z-index: 9;
+
+  @media screen and (max-width: 1024px) {
+    left: 900px;
+  }
+
+  @media screen and (max-width: 512px) {
+    display: none;
+  }
 `;

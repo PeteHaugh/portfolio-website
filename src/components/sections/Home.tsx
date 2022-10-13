@@ -43,6 +43,7 @@ const StyledHomeSection = styled.section`
   width: 600px;
   min-height: 100px;
 
+
   h1 {
     margin: 0 0 30px 4px;
     font-size: 90px;

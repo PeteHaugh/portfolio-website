@@ -7,15 +7,27 @@ const About = () => {
         <AboutText>
           <h1>About</h1>
           <h2>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi illo
-            beatae deserunt eaque neque praesentium velit accusamus quidem non
-            veniam cupiditate impedit, vel fuga atque molestiae sapiente culpa
-            cum modi.
+            I'm a mechanical engineer turned software engineer with a wide range of professional experiences in 
           </h2>
+
+          I am confident working with
+          <ul>
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>Python</li>
+            <li></li>
+            <li></li>
+          </ul>
+
+          I also have experience using Flask,
+
+          Currently, I'm trying to learn 
+
         </AboutText>
+
         <ImgContainer>
           <StyledImg src={require("../../assets/images/coffee.webp")} />
-          <StyledShadow src={require("../../assets/images/MugShade.webp")}/>
+          <StyledShadow src={require("../../assets/images/MugShade.webp")} />
         </ImgContainer>
       </StyledAboutSection>
     </>
@@ -26,20 +38,34 @@ export default About;
 
 const AboutText = styled.div`
   width: 70vw;
+  padding: 50px;
+  padding-right: 150px;
 
   > h1 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 30px 0;
     font-size: 50px;
     color: var(--heading-color);
     font-size: clamp(40px, 8vw, 60px);
     text-shadow: 5px 5px 0 #bcbcbc;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 20px;
+    padding-left: 0;
+
+  }
+
+  @media screen and (max-width: 512px) {
+    padding: 20px;
+    width: 100vw;
   }
 `;
 
 const StyledAboutSection = styled.section`
   width: 100%;
   min-height: 80vh;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background-image: linear-gradient(135deg, #d8c3a5, #bcbcbc);
   display: flex;
   align-items: center;
   position: relative;
@@ -59,6 +85,14 @@ const StyledImg = styled.img`
   left: -500px;
   transform: rotate(30deg);
   z-index: 2;
+
+  @media screen and (max-width: 1024px) {
+    left: -600px;
+  }
+
+  @media screen and (max-width: 512px) {
+    display: none;
+  }
 `;
 
 const StyledShadow = styled.img`
@@ -68,4 +102,12 @@ const StyledShadow = styled.img`
   left: -480px;
   transform: rotate(30deg);
   z-index: 1;
+
+  @media screen and (max-width: 1024px) {
+    left: -600px;
+  }
+
+  @media screen and (max-width: 512px) {
+    display: none;
+  }
 `;

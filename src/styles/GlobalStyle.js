@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components/macro";
-import TransitionStyles from "./TransitionsStyles";
 import variables from "./variables";
 
 const GlobalStyle = createGlobalStyle`
@@ -43,9 +42,6 @@ const GlobalStyle = createGlobalStyle`
         margin: 0 auto;
         width: 100%;
     }
-    
-
-    ${TransitionStyles}
 
 `;
 

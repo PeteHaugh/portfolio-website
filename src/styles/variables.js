@@ -7,13 +7,6 @@ const variables = css`
         --font-color: #8E8D8A;
         --heading-color: #E85A4F;
     }
-
-    [data-theme="dark"] {
-        --primary-color: #0B132B;
-        --secondary-color: #818cab;
-        --font-color: #e1e1ff;
-        --heading-color: #818cab;
-    }
 `;
 
 export default variables;

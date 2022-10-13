@@ -29,9 +29,11 @@ export default MainPage;
 const StyledMainPage = styled.main``;
 
 const StyledHome = styled.div`
+  
   width: 100%;
   min-height: 100vh;
   padding: 20px 100px;
+  padding-bottom: 150px;
   display: flex;
   flex-direction: row;
   align-items: center;

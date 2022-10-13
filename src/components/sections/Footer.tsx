@@ -1,5 +1,10 @@
 import React from "react";
-import { ArrowCircleUp, FileText, GithubLogo, LinkedinLogo } from "phosphor-react";
+import {
+  ArrowCircleUp,
+  FileText,
+  GithubLogo,
+  LinkedinLogo,
+} from "phosphor-react";
 import styled from "styled-components";
 
 const Footer = () => {
@@ -30,17 +35,17 @@ const Footer = () => {
             rel="noreferrer"
             href="https://www.linkedin.com/in/peter-haugh-224548125"
           >
-            <LinkedinLogo size={48} color="white" />
+            <LinkedinLogo size={48} color="aliceblue" />
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://github.com/PeteHaugh"
           >
-            <GithubLogo size={48} color="white" />
+            <GithubLogo size={48} color="aliceblue" />
           </a>
           <a href="" onClick={onButtonClick}>
-            <FileText size={48} color="white" />
+            <FileText size={48} color="aliceblue" />
           </a>
         </div>
       </StyledLinks>
@@ -65,9 +70,21 @@ const StyledLinks = styled.div`
 
   > a {
     margin: 0 auto;
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      transform: scale(0.9);
+    }
   }
 
   > div > a {
     padding: 10px;
+
+ 
+  }
+  > div > a {
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      transform: scale(0.9);
+    }
   }
 `;

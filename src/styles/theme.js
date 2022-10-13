@@ -4,3 +4,4 @@ export const theme = {
     primaryHover: '#8E8D8A',
     mobile: '576px',
   }
+  
