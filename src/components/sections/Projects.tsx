@@ -275,11 +275,10 @@ const ProjectLinks = styled.div`
 
 const ImageDiv = styled.div`
   flex: 0.5;
-  box-shadow: 5px 5px 0 #bcbcbc;
-  overflow: hidden;
-
   > img {
     width: 100%;
+    box-shadow: 5px 5px 0 #bcbcbc;
+    border-radius: 5px;
   }
 
   @media screen and (max-width: 1024px) {
