@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { ArrowSquareOut, Code, GitBranch, GithubLogo } from "phosphor-react";
+import { ArrowSquareOut, Code, GithubLogo } from "phosphor-react";
 
 const Projects = () => {
   return (
@@ -174,6 +174,7 @@ const Projects = () => {
           </p>
           <div>
             <ArrowSquareOut size={36} />
+            <GithubLogo size={36} />
           </div>
         </OtherProject>
 
@@ -187,6 +188,7 @@ const Projects = () => {
           </p>
           <div>
             <ArrowSquareOut size={36} />
+            <GithubLogo size={36} />
           </div>
         </OtherProject>
 
@@ -207,6 +209,7 @@ const Projects = () => {
           </p>
           <div>
             <ArrowSquareOut size={36} />
+            <GithubLogo size={36} />
           </div>
         </OtherProject>
       </OtherProjectDiv>
@@ -275,10 +278,17 @@ const ProjectLinks = styled.div`
 
 const ImageDiv = styled.div`
   flex: 0.5;
+
   > img {
     width: 100%;
     box-shadow: 5px 5px 0 #bcbcbc;
     border-radius: 5px;
+
+    &:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.99);
+    box-shadow: 3px 3px 0 #bcbcbc;
+  }
   }
 
   @media screen and (max-width: 1024px) {
