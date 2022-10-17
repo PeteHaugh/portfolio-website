@@ -29,7 +29,6 @@ export default MainPage;
 const StyledMainPage = styled.main``;
 
 const StyledHome = styled.div`
-  
   width: 100%;
   min-height: 100vh;
   padding: 20px 100px;
@@ -39,4 +38,8 @@ const StyledHome = styled.div`
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  @media screen and (max-width: 1500px) {
+    padding-top: 50px;
+  }
 `;

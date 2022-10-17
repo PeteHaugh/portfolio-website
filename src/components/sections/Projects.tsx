@@ -89,8 +89,7 @@ const Projects = () => {
 
           <p>
             A cooking blog
-
-            <hr/>
+            <hr />
             Check out the source cotent @TheGreedyGinger!
           </p>
 
@@ -184,7 +183,8 @@ const Projects = () => {
             <Code size={36} />
           </div>
           <p>
-            A basic chatroom using websockets and a backend written in Golang. This 
+            A basic chatroom using websockets and a backend written in Golang.
+            This
           </p>
           <div>
             <ArrowSquareOut size={36} />
@@ -203,9 +203,8 @@ const Projects = () => {
             which is used for finding the optimum move. The backend is written
             in Python and deployed using Flask, which sends optimum responses to
             player moves on the React based interface.
-            <hr/>
+            <hr />
             If you beat the AI, I'll improve the way it evaluates gamestate!
-
           </p>
           <div>
             <ArrowSquareOut size={36} />
@@ -258,7 +257,6 @@ const TextDiv = styled.div`
     height: 10px;
     visibility: hidden;
   }
-
 `;
 
 const ProjectLinks = styled.div`
@@ -285,10 +283,10 @@ const ImageDiv = styled.div`
     border-radius: 5px;
 
     &:hover {
-    transition: all 0.3s ease-in-out;
-    transform: scale(0.99);
-    box-shadow: 3px 3px 0 #bcbcbc;
-  }
+      transition: all 0.3s ease-in-out;
+      transform: scale(0.99);
+      box-shadow: 3px 3px 0 #bcbcbc;
+    }
   }
 
   @media screen and (max-width: 1024px) {
@@ -310,24 +308,32 @@ const StyledProject = styled.div`
 
 const StyledProjectRev = styled(StyledProject)`
   flex-direction: row-reverse;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const TextDivRev = styled(TextDiv)`
-  > h2 {
-    text-align: right;
-  }
-  > ul {
-    justify-content: flex-end;
-  }
-  > p {
-    text-align: right;
-    padding-right: 0px;
-    padding-left: 30px;
+  @media screen and (min-width: 1024px) {
+    > h2 {
+      text-align: right;
+    }
+    > ul {
+      justify-content: flex-end;
+    }
+    > p {
+      text-align: right;
+      padding-right: 0px;
+      padding-left: 30px;
+    }
   }
 `;
 
 const ProjectLinksRev = styled(ProjectLinks)`
-  flex-direction: row-reverse;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row-reverse;
+  }
 `;
 
 const StyledProjectsSection = styled.section`
