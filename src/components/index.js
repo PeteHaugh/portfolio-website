@@ -2,7 +2,6 @@ export { default as About } from './sections/About';
 export { default as Home } from './sections/Home';
 export { default as Projects } from './sections/Projects';
 export { default as Contact } from './sections/Contact';
-export { default as Synthesizer } from './Synthesizer';
 
 export { default as ChatHistory } from './Chatroom/ChatHistory';
 export { default as ChatInput } from './Chatroom/ChatInput';

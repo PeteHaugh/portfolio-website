@@ -10,7 +10,6 @@ import {
   TurntablePage,
   ConnectFourPage,
   ChatroomPage,
-  SynthesizerPage,
   MainPage,
 } from "./pages";
 import { ThemeProvider } from "styled-components";
@@ -36,7 +35,6 @@ const App: React.FC = () => {
           <Route path="/Turntable" element={<TurntablePage />} />
           <Route path="/ConnectFour" element={<ConnectFourPage />} />
           <Route path="/Chatroom" element={<ChatroomPage />} />
-          <Route path="/Synthesizer" element={<SynthesizerPage />} />
         </Routes>
       </Router>
     </ThemeProvider>
