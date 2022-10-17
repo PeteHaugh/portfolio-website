@@ -339,7 +339,8 @@ const StyledProjectsSection = styled.section`
   max-width: 1200px;
 
   h1 {
-    margin: 0 0 4px 4px;
+    margin-left: 50px;
+    margin-bottom: 0;
     font-size: 50px;
     color: var(--heading-color);
     text-shadow: 5px 5px 0 #bcbcbc;

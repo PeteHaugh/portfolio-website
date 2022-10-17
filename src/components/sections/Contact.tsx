@@ -64,7 +64,7 @@ const Contact = () => {
           <label>
             <input
               {...register("email", { required: true })}
-              placeholder="Your name"
+              placeholder="Your email"
               type="email"
             />
           </label>
