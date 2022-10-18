@@ -7,10 +7,7 @@ const Row = ({ row }) => {
   return (
     <tr>
       {row.map((cell, i) => (
-        <Cell
-          key={i}
-          value={cell}
-        />
+        <Cell key={i} value={cell} />
       ))}
     </tr>
   );
@@ -19,19 +16,15 @@ const Row = ({ row }) => {
 const Cell = ({ value }) => {
   let color = "whiteCircle";
 
-  if (value === 'X') {
+  if (value === "O") {
     color = "redCircle";
-  } else if (value === 'O') {
+  } else if (value === "X") {
     color = "yellowCircle";
   }
 
   return (
     <td>
-      <FlexDiv
-        justify="center"
-        align="center"
-        className="gameCell"
-      >
+      <FlexDiv justify="center" align="center" className="gameCell">
         <div className={color}></div>
       </FlexDiv>
     </td>
@@ -42,12 +35,17 @@ export default Row;
 
 const FlexDiv = styled.div`
   display: flex;
-  background-color: lightblue;
+  background-color: #1990ff;
+  border-radius: 3px;
   .gameCell {
-    height: 70px;
-    width: 70px;
-    background-color: #1990ff;
+    height: 80px;
+    width: 80px;
     cursor: pointer;
+
+    @media screen and (max-width: 512px) {
+      height: 50px;
+      width: 50px;
+    }
   }
 
   .whiteCircle,
@@ -55,7 +53,15 @@ const FlexDiv = styled.div`
   .yellowCircle {
     height: 60px;
     width: 60px;
-    border-radius: 100px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    @media screen and (max-width: 512px) {
+      height: 40px;
+      width: 40px;
+    }
   }
 
   .whiteCircle {
@@ -64,11 +70,19 @@ const FlexDiv = styled.div`
 
   .redCircle {
     background-color: rgb(251, 42, 42);
-    transition: background-color 0.2s 1s;
+    transition: all 0.2s;
+    border: 10px solid rgb(181, 42, 42);
+    @media screen and (max-width: 512px) {
+      border: 5px solid rgb(181, 42, 42);
+    }
   }
 
   .yellowCircle {
     background-color: rgb(243, 239, 20);
-    transition: background-color 0.2s;
+    transition: all 0.2s 0.6s;
+    border: 10px solid rgb(192, 189, 35);
+    @media screen and (max-width: 512px) {
+      border: 5px solid rgb(192, 189, 35);
+    }
   }
 `;
