@@ -160,41 +160,41 @@ const Projects = () => {
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
       </StyledProjectRev>
-      <h2>Other noteworthy projects</h2>
+      <h2 className="Other">Other noteworthy projects</h2>
       <OtherProjectDiv>
         <OtherProject>
-          <div>
-            <h2>MATLAB</h2>
+          <div className="top">
+            <h3>MATLAB</h3>
             <Code size={36} />
           </div>
           <p>
             A first principles partial differential equation solv **Disclaimer,
             intense maths**
           </p>
-          <div>
+          <div className="bottom">
             <ArrowSquareOut size={36} />
             <GithubLogo size={36} />
           </div>
         </OtherProject>
 
         <OtherProject>
-          <div>
-            <h2>Go Chat</h2>
+          <div className="top">
+            <h3>Go Chat</h3>
             <Code size={36} />
           </div>
           <p>
             A basic chatroom using websockets and a backend written in Golang.
             This
           </p>
-          <div>
+          <div className="bottom">
             <ArrowSquareOut size={36} />
             <GithubLogo size={36} />
           </div>
         </OtherProject>
 
         <OtherProject>
-          <div>
-            <h2>Connect Four</h2>
+          <div className="top">
+            <h3>Connect Four</h3>
             <Code size={36} />
           </div>
           <p>
@@ -206,7 +206,7 @@ const Projects = () => {
             <hr />
             If you beat the AI, I'll improve the way it evaluates gamestate!
           </p>
-          <div>
+          <div className="bottom">
             <ArrowSquareOut size={36} />
             <GithubLogo size={36} />
           </div>
@@ -351,6 +351,10 @@ const StyledProjectsSection = styled.section`
     color: var(--heading-color);
     text-shadow: 5px 5px 0 #bcbcbc;
   }
+
+  .Other {
+    margin-left: 50px;
+  }
 `;
 
 const OtherProjectDiv = styled.div`
@@ -382,10 +386,17 @@ const OtherProject = styled.div`
   > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     padding-bottom: 20px;
+  }
+
+  > .top {
+    justify-content: space-between;
+  }
+
+  > .bottom {
+    justify-content: flex-start;
   }
 
   &:hover {

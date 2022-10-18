@@ -4,7 +4,6 @@ import Sketch from "react-p5";
 import p5Types from "p5"; //Import this for typechecking and intellisense
 import "p5/lib/addons/p5.sound";
 import styled from "styled-components";
-import { X } from "phosphor-react";
 
 const Turntable: React.FC<ComponentProps> = () => {
   let a = 0;
@@ -48,9 +47,7 @@ const Turntable: React.FC<ComponentProps> = () => {
       size = 1;
     }
 
-    canvas = p5
-      .createCanvas(700 * size, 880 * size, "relative")
-      .parent("canvasParent");
+    canvas = p5.createCanvas(700 * size, 880 * size).parent("canvasParent");
     p5.pixelDensity(1);
     mySound.loop();
     p5.angleMode(p5.DEGREES);
@@ -75,9 +72,9 @@ const Turntable: React.FC<ComponentProps> = () => {
     range = p5.constrain(bx, 380 * size, 580 * size);
     let val = (range / 480) * size;
 
-    let d = p5.dist(p5.mouseX, p5.mouseY, 350, 440);
+    let d = p5.dist(p5.mouseX, p5.mouseY, p5.width / 2, p5.height / 2);
 
-    if (d < 650 / 2) {
+    if (d < (650 * size) / 2) {
       b = p5.atan2(p5.mouseY - p5.height / 2, p5.mouseX - p5.width / 2);
       p5.cursor("grab");
     } else if (rotation === 1) {

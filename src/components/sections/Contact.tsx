@@ -2,11 +2,13 @@ import { useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { SubmitHandler, useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 interface IFormInput {
   name: string;
   email: string;
   message: string;
   contactNumber: number;
+  errors: any;
 }
 
 const Contact = () => {
@@ -39,61 +41,77 @@ const Contact = () => {
       })
       .catch((error) => {
         setSubmitted(false);
+        toast("Email send error");
       });
   };
 
   return (
     <>
-    <StyledContactSection>
-      <h1>Contact</h1>
+      <StyledContactSection>
+        <h1>Contact</h1>
+        <Toaster />
+        {submitted ? (
+          <ThanksDiv>
+            <h3>Thanks for sending an email!</h3>
+            <p>I'll reply to it as soon as I see it!</p>
+          </ThanksDiv>
+        ) : (
+          <StyledForm id="contact-form" onSubmit={handleSubmit(onSubmit)}>
+            <label>
+              <input
+                {...register("name", { required: true })}
+                placeholder="Your name"
+                type="text"
+              />
+            </label>
+            <label>
+              <input
+                {...register("email", { required: true })}
+                placeholder="Your email"
+                type="email"
+              />
+            </label>
+            <label>
+              <textarea
+                {...register("message", { required: true })}
+                placeholder="Please leave a message"
+                rows={8}
+              />
+            </label>
+            <input type="hidden" name="contact_number" value={contactNumber} />
+            <ErrorDiv>
+              {errors.name && toast.error("Please add your name")}
+              {errors.email && toast.error("Please add your email")}
+              {errors.message && toast.error("Please add a message")}
+            </ErrorDiv>
 
-      {submitted ? (
-        <ThanksDiv>
-          <h3>Thanks for sending an email!</h3>
-          <p>I'll reply to it as soon as I see it!</p>
-        </ThanksDiv>
-      ) : (
-        <StyledForm id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-          <label>
-            <input
-              {...register("name", { required: true })}
-              placeholder="Your name"
-              type="text"
-            />
-          </label>
-          <label>
-            <input
-              {...register("email", { required: true })}
-              placeholder="Your email"
-              type="email"
-            />
-          </label>
-          <label>
-            <textarea
-              {...register("message", { required: true })}
-              placeholder="Please leave a message"
-              rows={8}
-            />
-          </label>
-          <input type="hidden" name="contact_number" value={contactNumber} />
-          <ErrorDiv>
-            {errors.name && <span>- The Name Field is required</span>}
-            {errors.email && <span>- The Email Field is required</span>}
-            {errors.message && <span>- The Comment Field is required</span>}
-          </ErrorDiv>
-
-          <input type="submit" />
-        </StyledForm>
-      )}
-      <StyledImg src={require("../../assets/images/headphones.webp")} />
-      <StyledShadow src={require("../../assets/images/HeadphoneShade.webp")} />
-    </StyledContactSection>
-      
-      </>
+            <input type="submit" />
+          </StyledForm>
+        )}
+        <ImgContainer>
+          <StyledImg src={require("../../assets/images/headphones.webp")} />
+          <StyledShadow
+            src={require("../../assets/images/HeadphoneShade.webp")}
+          />
+        </ImgContainer>
+      </StyledContactSection>
+    </>
   );
 };
 
 export default Contact;
+
+const ImgContainer = styled.div`
+  position: absolute;
+  display: block;
+  width: calc(100vw - 700px);
+  height: 900px;
+  left: 700px;
+  top: -250px;
+  overflow: hidden;
+
+  
+`;
 
 const ThanksDiv = styled.div`
   display: flex;
@@ -120,7 +138,6 @@ const StyledForm = styled.form`
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 700;
-    
   }
 
   > label {
@@ -136,7 +153,6 @@ const StyledForm = styled.form`
     border-radius: 0.5rem;
     width: 12rem;
     margin: 20px auto;
-
 
     &:hover {
       transition: all 0.2s ease-in-out;
@@ -154,6 +170,7 @@ const StyledForm = styled.form`
     padding: 8px 12px;
     margin-bottom: 1rem;
     width: 100%;
+    border: 1px solid gray;
 
     &:focus {
       outline: none !important;
@@ -182,44 +199,32 @@ const ErrorDiv = styled.div`
   flex-direction: row;
   padding: 5px;
   justify-content: space-around;
-  
-  > span {
-    color: red;
-  }
+
+  display: none;
 `;
 
 const StyledImg = styled.img`
   position: absolute;
   width: 800px;
-  left: 800px;
   transform: rotate(-30deg);
-  top: -300px;
-  overflow: hidden;
   z-index: 10;
+  display: block;
+
 
   @media screen and (max-width: 1024px) {
-    left: 900px;
-  }
-
-  @media screen and (max-width: 512px) {
     display: none;
   }
 `;
 
 const StyledShadow = styled.img`
- position: absolute;
+  position: absolute;
   width: 800px;
-  left: 810px;
+  left: 10px;
   transform: rotate(-30deg);
-  top: -290px;
-  overflow: hidden;
+  top: -10px;
   z-index: 9;
 
   @media screen and (max-width: 1024px) {
-    left: 900px;
-  }
-
-  @media screen and (max-width: 512px) {
     display: none;
   }
 `;

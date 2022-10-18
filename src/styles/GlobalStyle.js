@@ -32,6 +32,26 @@ const GlobalStyle = createGlobalStyle`
         color: var(--font-color);
         transition: all 0.5s ease;
         font-family: 'LeagueSpartanBlack', 'Helvetica', sans-serif;
+        ::-webkit-scrollbar {
+    background-color: gray;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #eae7dc;
+    opacity: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2f3136;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E85A4F;
+  }
     }
 
     :root {

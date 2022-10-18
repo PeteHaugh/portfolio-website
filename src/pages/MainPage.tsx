@@ -26,7 +26,9 @@ const MainPage = () => {
 
 export default MainPage;
 
-const StyledMainPage = styled.main``;
+const StyledMainPage = styled.main`
+
+`;
 
 const StyledHome = styled.div`
   width: 100%;

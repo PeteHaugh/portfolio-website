@@ -55,8 +55,8 @@ const AboutText = styled.div`
 
   }
 
-  @media screen and (max-width: 512px) {
-    padding: 20px;
+  @media screen and (max-width: 768px) {
+    padding: 50px;
     width: 100vw;
   }
 `;
@@ -90,7 +90,7 @@ const StyledImg = styled.img`
     left: -600px;
   }
 
-  @media screen and (max-width: 512px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -107,7 +107,7 @@ const StyledShadow = styled.img`
     left: -600px;
   }
 
-  @media screen and (max-width: 512px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
