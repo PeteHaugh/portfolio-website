@@ -7,7 +7,7 @@ import { Row } from "../index";
 import toast, { Toaster } from "react-hot-toast";
 import { ArrowDown } from "phosphor-react";
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://connect-four-petehaugh.herokuapp.com";
 
 const newBoard = [
   [null, null, null, null, null, null],
