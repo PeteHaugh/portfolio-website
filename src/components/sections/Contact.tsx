@@ -109,8 +109,6 @@ const ImgContainer = styled.div`
   left: 700px;
   top: -250px;
   overflow: hidden;
-
-  
 `;
 
 const ThanksDiv = styled.div`
@@ -171,6 +169,23 @@ const StyledForm = styled.form`
     margin-bottom: 1rem;
     width: 100%;
     border: 1px solid gray;
+    font-family: inherit;
+    border-radius: 5px;
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      opacity: 0.5; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      opacity: 0.5;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      opacity: 0.5;
+    }
 
     &:focus {
       outline: none !important;
@@ -209,7 +224,6 @@ const StyledImg = styled.img`
   transform: rotate(-30deg);
   z-index: 10;
   display: block;
-
 
   @media screen and (max-width: 1024px) {
     display: none;
