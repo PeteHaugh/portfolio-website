@@ -42,9 +42,9 @@ const Footer = () => {
           >
             <GithubLogo size={48} color="aliceblue" />
           </a>
-          <a href="" onClick={onButtonClick}>
+          <span onClick={onButtonClick}>
             <FileText size={48} color="aliceblue" />
-          </a>
+          </span>
         </div>
       </StyledLinks>
     </StyledFooter>

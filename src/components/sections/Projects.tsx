@@ -207,7 +207,7 @@ const Projects = () => {
             If you beat the AI, I'll improve the way it evaluates gamestate!
           </p>
           <div className="bottom">
-            <ArrowSquareOut size={36} />
+            <Link to="/ConnectFour"><ArrowSquareOut size={36} /></Link>
             <GithubLogo size={36} />
           </div>
         </OtherProject>

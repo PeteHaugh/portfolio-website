@@ -8,6 +8,9 @@ export { default as ChatInput } from './Chatroom/ChatInput';
 export { default as Header } from './Chatroom/Header';
 export { default as Message } from './Chatroom/Message';
 
+export { default as ConnectFour } from './ConnectFour/ConnectFour';
+export { default as Row } from './ConnectFour/Row';
+
 export { default as Burger } from './Burger';
 export { default as Menu } from './Menu'
 export { default as Footer } from './sections/Footer'

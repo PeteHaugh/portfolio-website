@@ -1,10 +1,10 @@
-import React from 'react'
-import ConnectFour from '../components/ConnectFour'
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { SkipBack } from 'phosphor-react';
+import React from "react";
+import { ConnectFour } from "../components/index";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { SkipBack } from "phosphor-react";
 
-type Props = {}
+type Props = {};
 
 const StyledPage = styled.div`
   width: 800px;
@@ -16,9 +16,11 @@ const ConnectFourPage = (props: Props) => {
     <StyledPage>
       <h1>Connect Four!</h1>
       <ConnectFour />
-      <Link to="/#Projects"><SkipBack size={100} /></Link>
+      <Link to="/#Projects">
+        <SkipBack size={100} />
+      </Link>
     </StyledPage>
-  )
-}
+  );
+};
 
-export default ConnectFourPage
+export default ConnectFourPage;

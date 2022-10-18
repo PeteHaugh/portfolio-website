@@ -1,7 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { Header, ChatHistory, ChatInput } from '../components';
-//import './App.css';
 import { connect, sendMessage } from '../api/ChatRoomAPI';
 import { Link } from 'react-router-dom';
 import { SkipBack } from 'phosphor-react';
