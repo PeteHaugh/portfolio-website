@@ -12,5 +12,4 @@ export { default as ConnectFour } from './ConnectFour/ConnectFour';
 export { default as Row } from './ConnectFour/Row';
 
 export { default as Burger } from './Burger';
-export { default as Menu } from './Menu'
-export { default as Footer } from './sections/Footer'
+export { default as Footer } from './sections/Footer';

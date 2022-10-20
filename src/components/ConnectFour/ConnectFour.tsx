@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useState, useReducer, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import Confetti from "react-confetti";
@@ -49,7 +49,7 @@ const ConnectFour = () => {
         icon: "🤔",
       });
     }
-  }, [board[1]]);
+  }, [board]);
 
   const handleMove = (column) => {
     axios.get(`/move/${column}`).then((response) => setBoard(response.data));

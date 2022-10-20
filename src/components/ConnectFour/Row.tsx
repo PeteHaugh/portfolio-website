@@ -1,6 +1,4 @@
 // @ts-nocheck
-import { ComputerTower } from "phosphor-react";
-import React from "react";
 import styled from "styled-components";
 
 const Row = ({ row }) => {
