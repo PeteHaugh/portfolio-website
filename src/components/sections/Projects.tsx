@@ -115,7 +115,7 @@ const Projects = () => {
           </ProjectLinks>
         </TextDiv>
         <ImageDiv>
-          <img src={require("../../assets/images/TestProject.png")} alt="" />
+          <img src={require("../../assets/gifs/Messaging-App-Gif.gif")} alt="" />
         </ImageDiv>
       </StyledProject>
       <StyledProjectRev>
@@ -124,12 +124,12 @@ const Projects = () => {
 
           <p>
             A cooking blog that using Sanity CMS to manage the content. The site
-            implements incremental static regeneration (thanks to Next) alloing
+            implements incremental static regeneration (thanks to Next) allowing
             updating of static content instantly without needing to fully
-            rebuild the site
+            rebuild the site.
           </p>
           <p>
-            Source content (with permission) from{" "}
+            Source content kindly contributed by{" "}
             <a
               href="https://www.instagram.com/the_greedy_ginger/?hl=en"
               target="_blank"
@@ -163,7 +163,7 @@ const Projects = () => {
           </ProjectLinksRev>
         </TextDivRev>
         <ImageDiv>
-          <img src={require("../../assets/images/TestProject.png")} alt="" />
+          <img src={require("../../assets/gifs/Cooking-Blog-Gif.gif")} alt="" />
         </ImageDiv>
       </StyledProjectRev>
 
@@ -323,9 +323,11 @@ const ProjectLinks = styled.div`
 
 const ImageDiv = styled.div`
   flex: 0.5;
+  
 
   > img {
     width: 100%;
+    border: 5px solid gray;
     box-shadow: 5px 5px 0 #bcbcbc;
     border-radius: 5px;
 
@@ -347,6 +349,7 @@ const StyledProject = styled.div`
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  align-items:center;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -413,6 +416,7 @@ const OtherProjectDiv = styled.div`
   gap: 15px;
   position: relative;
   width: 70vw;
+  max-width: 1500px;
 `;
 
 const OtherProject = styled.div`

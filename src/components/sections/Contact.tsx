@@ -227,6 +227,7 @@ const StyledImg = styled.img`
   width: 800px;
   transform: rotate(-30deg);
   z-index: 10;
+  top:10px;
   display: block;
 
   @media screen and (max-width: 1024px) {
@@ -239,7 +240,6 @@ const StyledShadow = styled.img`
   width: 800px;
   left: 10px;
   transform: rotate(-30deg);
-  top: -10px;
   z-index: 9;
 
   @media screen and (max-width: 1024px) {

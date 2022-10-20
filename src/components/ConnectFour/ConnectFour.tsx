@@ -133,13 +133,13 @@ const StyledButtonRow = styled.div`
 `;
 
 const StyledButton = styled.button`
-  width: 64px;
+  width: 52px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 
   @media screen and (max-width: 512px) {
-    width: 46px;
+    width: 34px;
   }
 
   &:hover {

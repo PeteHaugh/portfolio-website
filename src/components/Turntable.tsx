@@ -88,7 +88,7 @@ const Turntable: React.FC<ComponentProps> = () => {
     AngleV = (Angle - AngleOld) / (1 / 60) / size ** 2;
 
     p5.translate(p5.width / 2, 500 * size);
-    p5.rotate(a * val + b);
+    p5.rotate((a * val + b)/size**2);
     p5.image(record, -325 * size, -325 * size, 650 * size, 650 * size);
     p5.pop();
 
