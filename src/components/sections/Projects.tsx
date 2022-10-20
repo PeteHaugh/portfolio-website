@@ -14,7 +14,11 @@ const Projects = () => {
             A portfolio site made using react. The interactive turntable was
             created using p5.js It also hosts the front end for some of my
             smaller projects such as my{" "}
-            <Link to="/ConnectFour"> Connect Four</Link> game.
+            <Link className="linkfour" to="/ConnectFour">
+              {" "}
+              Connect Four
+            </Link>{" "}
+            game.
           </p>
 
           <ul>
@@ -115,7 +119,10 @@ const Projects = () => {
           </ProjectLinks>
         </TextDiv>
         <ImageDiv>
-          <img src={require("../../assets/gifs/Messaging-App-Gif.gif")} alt="" />
+          <img
+            src={require("../../assets/gifs/Messaging-App-Gif.gif")}
+            alt=""
+          />
         </ImageDiv>
       </StyledProject>
       <StyledProjectRev>
@@ -271,6 +278,7 @@ const TextDiv = styled.div`
 
   > h2 {
     margin-top: 0;
+    color: #6c6a66;
   }
 
   > ul {
@@ -283,7 +291,12 @@ const TextDiv = styled.div`
     margin: 25px 0px 10px;
 
     > li {
-      margin: 0px 20px 0px 0px;
+      margin: 0px 5px 0px 0px;
+      color: #6c6a66;
+      font-weight: 900;
+      border: 1px solid gray;
+      border-radius: 2px;
+      padding: 0px 4px;
       &:hover {
         transition: all 0.1s linear;
         transform: scale(1.05);
@@ -294,6 +307,18 @@ const TextDiv = styled.div`
 
   > p {
     padding-right: 30px;
+    font-weight: 500;
+
+    .linkfour {
+      color: #6c6a66;
+      font-weight: 700;
+
+      &:hover {
+        transition: all 0.1s linear;
+        transform: scale(1.2);
+        color: var(--heading-color);
+      }
+    }
   }
 
   > p > hr {
@@ -323,7 +348,6 @@ const ProjectLinks = styled.div`
 
 const ImageDiv = styled.div`
   flex: 0.5;
-  
 
   > img {
     width: 100%;
@@ -349,7 +373,7 @@ const StyledProject = styled.div`
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  align-items:center;
+  align-items: center;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
