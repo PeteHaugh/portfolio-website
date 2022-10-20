@@ -10,15 +10,17 @@ export const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1 className="big-heading">Pete Haugh</h1>;
-  const two = <h2>I make things and solve problems</h2>;
+  const two = <h1 className="big-heading">Pete Haugh.</h1>;
   const three = (
+    <h2>
+      I'm a software engineer.
+    </h2>
+  );
+  const one = (
     <p>
-      I'm an engineer with experience in a wide range of fields, specialising in
-      electro-mechanical design, UX and software
+      Hello! My name is,
     </p>
   );
-
   const items = [one, two, three];
 
   return (
@@ -50,7 +52,6 @@ const StyledHomeSection = styled.section`
     width: 35vw;
   }
 
-
   h1 {
     margin: 0 0 30px 4px;
     font-size: 90px;
@@ -60,11 +61,21 @@ const StyledHomeSection = styled.section`
 
   .big-heading {
     margin: 0;
-    font-size: clamp(4rem, 8vw, 6.25);
+    font-size: clamp(5rem, 8vw, 6.25rem);
+    
+    text-decoration: underline;
+    text-decoration-thickness: 12px;
   }
 
   h2 {
+    padding-top: 10px;
+    padding-left: 10px;
     font-size: 1.5rem;
+  }
+
+  p {
+    font-weight: 600;
+    padding-left: 15px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -77,7 +88,7 @@ const StyledHomeSection = styled.section`
     padding-right: 50px;
 
     h2 {
-    font-size: 1.3rem;
-  }
+      font-size: 1.3rem;
+    }
   }
 `;
