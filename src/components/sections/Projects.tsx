@@ -90,7 +90,7 @@ const Projects = () => {
           <h2>Messaging App</h2>
 
           <p>
-            A live messaging app using Firebase Hooks to deliver messages in
+            A live messaging app using Firebase to deliver messages in
             real-time, featuring different chat rooms powered by redux. Log in
             using your google account to start sending messages.
           </p>
@@ -183,13 +183,10 @@ const Projects = () => {
           </div>
           <p>
             A simple connect four game, where you play against the computer. The
-            computer consists of the Minimax algorithm, a recursive algorithm
+            computer consists of the <span>Minimax Algorithm</span>, a recursive algorithm
             which is used for finding the optimum move. The backend is written
-            in Python and deployed using Flask, which sends optimum responses to
+            in <span>Python</span> and deployed using <span>Flask</span>, which sends optimum responses to
             player moves on the React based interface.
-          </p>
-          <p>
-            If you beat the AI, I'll improve the way it evaluates gamestate!
           </p>
           <div className="bottom">
             <Link to="/ConnectFour">
@@ -204,10 +201,14 @@ const Projects = () => {
             <h3>Spotify Stats</h3>
             <Code size={36} />
           </div>
-          <p>A site to view your spotify stats.</p>
+          <p>
+            A React app to view your spotify stats such as top artists, albums and playlists using the <span>Spotify API</span>,{" "}
+            <span>Express</span> and <span>OAuth</span>.
+          </p>
           <div className="bottom">
             <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
             <GithubLogo size={36} className="cursor" />
+            {/* <a href="https://ibb.co/yRdn7Cg"><img src="https://i.ibb.co/j5bvsY3/React-JS-vs-Vue-JS-Web-Framework.jpg" alt="React-JS-vs-Vue-JS-Web-Framework" border="0"></a> */}
           </div>
         </OtherProject>
         <OtherProject>
@@ -215,7 +216,12 @@ const Projects = () => {
             <h3>MATLAB</h3>
             <Code size={36} />
           </div>
-          <p>A first principles partial differential equation solv</p>
+          <p>
+            A first principles finite element based simulation tool for solving
+            the transient form of the diffusion-reaction equation. In actual
+            real words, a <span>MATLAB</span> tool for simulating 1-D heat transfer through the
+            three layered structure of human skin.
+          </p>
           <p>**Disclaimer, intense maths**</p>
           <div className="bottom">
             <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
@@ -235,8 +241,8 @@ const Projects = () => {
             <Code size={36} />
           </div>
           <p>
-            A basic chatroom using websockets and a backend written in Golang.
-            This
+            A basic chatroom using websockets and a backend written in <span>Golang</span>.
+            One of my first projects using Golang.
           </p>
           <div className="bottom">
             <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
@@ -429,6 +435,17 @@ const StyledProjectsSection = styled.section`
   .Other {
     margin-left: 50px;
   }
+
+  span {
+      color: #6c6a66;
+      font-weight: 700;
+
+      &:hover {
+        transition: all 0.1s linear;
+        transform: scale(1.2);
+        color: var(--heading-color);
+      }
+    }
 `;
 
 const OtherProjectDiv = styled.div`
