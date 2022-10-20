@@ -72,6 +72,7 @@ const AboutText = styled.div`
 
     @media screen and (max-width: 768px) {
       padding-right: 0;
+      font-size: 1.4rem;
     }
   }
 

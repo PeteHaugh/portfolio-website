@@ -332,6 +332,10 @@ const TextDiv = styled.div`
     height: 10px;
     visibility: hidden;
   }
+
+  @media screen and (max-width: 512px) {
+    padding: 10px 0;
+  }
 `;
 
 const ProjectLinks = styled.div`
