@@ -75,7 +75,7 @@ const StyledMenu = styled.nav`
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-  height: 100vh;
+  height: 101vh;
   text-align: left;
   padding: 2rem;
   position: fixed;
@@ -85,6 +85,7 @@ const StyledMenu = styled.nav`
   z-index: 8;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
+    padding: 0;
   }
   a {
     font-size: 2rem;
@@ -95,7 +96,9 @@ const StyledMenu = styled.nav`
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
     transition: color 0.3s linear;
+    text-align: center;
     @media (max-width: ${({ theme }) => theme.mobile}) {
+      padding: 2rem 4px;
       font-size: 1.5rem;
       text-align: center;
     }
