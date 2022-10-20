@@ -1,16 +1,11 @@
 import { createGlobalStyle } from "styled-components/macro";
 import variables from "./variables";
+import TransitionStyles from "./TransitionStyles";
 
 const GlobalStyle = createGlobalStyle`
 
     ${variables};
-
-    html {
-        box-sizing: border-box;
-        scrollbar-width: thin;
-        scroll-behavior: smooth;
-        padding: 0;
-    }
+    
 
     *,
     *:before,
@@ -31,7 +26,8 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--primary-color);
         color: var(--font-color);
         transition: all 0.5s ease;
-        font-family: 'LeagueSpartanBlack', 'Helvetica', sans-serif;
+        /* 'League Spartan', */
+        font-family:  'Helvetica', sans-serif;
         ::-webkit-scrollbar {
     background-color: gray;
   }
@@ -63,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
     }
 
+    ${TransitionStyles}
 `;
 
 export default GlobalStyle;

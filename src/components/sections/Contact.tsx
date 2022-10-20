@@ -198,14 +198,18 @@ const StyledContactSection = styled.section`
   max-width: 48rem;
   margin: 0 auto;
   padding: 5px;
-  height: 60vh;
   position: relative;
+  
 
   > h1 {
     margin: 20px 0;
     font-size: 50px;
     color: var(--heading-color);
     text-shadow: 5px 5px 0 #bcbcbc;
+  }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 80vw;
   }
 `;
 

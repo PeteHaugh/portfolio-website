@@ -39,7 +39,7 @@ const Turntable: React.FC<ComponentProps> = () => {
   };
 
   const setup = (p5: p5Types, canvasParentRef: Element) => {
-    if (p5.windowWidth < 1024) {
+    if (p5.windowWidth < 1324) {
       size = 0.5;
     } else if (p5.windowWidth < 1536) {
       size = 0.7;
@@ -60,7 +60,7 @@ const Turntable: React.FC<ComponentProps> = () => {
   };
 
   const draw = (p5: p5Types) => {
-    if (p5.windowWidth < 1024) {
+    if (p5.windowWidth < 1324) {
       size = 0.5;
     } else if (p5.windowWidth < 1536) {
       size = 0.7;
@@ -175,7 +175,7 @@ const Turntable: React.FC<ComponentProps> = () => {
   }
 
   function windowResized(p5) {
-    if (p5.windowWidth < 1024) {
+    if (p5.windowWidth < 1324) {
       size = 0.5;
       xOffset = 0.0;
     } else if (p5.windowWidth < 1536) {
@@ -235,7 +235,7 @@ const StyledTurntable = styled.div`
     height: calc(880px * 0.7);
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1324px) {
     width: calc(700px * 0.5);
     height: calc(880px * 0.5);
   }

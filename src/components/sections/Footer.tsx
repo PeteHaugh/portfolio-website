@@ -55,7 +55,7 @@ export default Footer;
 
 const StyledFooter = styled.div`
   height: 200px;
-  width: 100%;
+  width: 101%;
   background-color: #212124;
   display: flex;
 `;

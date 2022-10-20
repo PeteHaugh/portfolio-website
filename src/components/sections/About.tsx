@@ -62,7 +62,7 @@ const AboutText = styled.div`
 `;
 
 const StyledAboutSection = styled.section`
-  width: 100%;
+  width: 101%;
   min-height: 80vh;
   /* background-color: aliceblue; */
   background-image: linear-gradient(135deg, #d8c3a5, #bcbcbc);

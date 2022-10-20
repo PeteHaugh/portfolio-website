@@ -42,6 +42,13 @@ export default Home;
 const StyledHomeSection = styled.section`
   width: 600px;
   min-height: 100px;
+  flex-wrap: none;
+  position: relative;
+  padding-left: 50px;
+
+  @media screen and (max-width: 1200px) {
+    width: 35vw;
+  }
 
 
   h1 {
@@ -53,14 +60,24 @@ const StyledHomeSection = styled.section`
 
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 100px);
+    font-size: clamp(4rem, 8vw, 6.25);
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: 1024px) {
     height: 80vh;
-
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    h2 {
+    font-size: 1.3rem;
+  }
   }
 `;

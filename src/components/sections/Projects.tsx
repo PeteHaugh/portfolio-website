@@ -8,12 +8,46 @@ const Projects = () => {
       <h1>Projects</h1>
       <StyledProject>
         <TextDiv>
+          <h2>Portfolio Site</h2>
+
+          <p>
+            A portfolio site made using react. The interactive turntable was
+            created using p5.js It also hosts the front end for some of my
+            smaller projects such as my{" "}
+            <Link to="/ConnectFour"> Connect Four</Link> game.
+          </p>
+
+          <ul>
+            <li>React.js</li>
+            <li>React Router</li>
+            <li>Typescript</li>
+            <li>p5.js</li>
+            <li>Styled Components</li>
+          </ul>
+          <ProjectLinks>
+            <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
+
+            <a
+              href="https://github.com/PeteHaugh/blog-cms"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubLogo size={36} className="cursor" />
+            </a>
+          </ProjectLinks>
+        </TextDiv>
+        <ImageDiv>
+          <img src={require("../../assets/images/TestProject.png")} alt="" />
+        </ImageDiv>
+      </StyledProject>
+      <StyledProjectRev>
+        <TextDivRev>
           <h2>Social Media</h2>
           <p>
-            A Reddit style social media app. After logging in using OAuth, uses
+            A Reddit style social media app. After logging in using OAuth, user
             can create posts, create subreddits, comment on posts and more. It
-            also includes a functioning up vote system and karma. This project
-            was made to practice using GraphQL
+            also includes a functioning reddit-style up vote system. This
+            project was made to practice using GraphQL and Apollo Client.
             <hr />
             Feel free to leave a post!
           </p>
@@ -25,35 +59,36 @@ const Projects = () => {
             <li>SQL</li>
             <li>Tailwind CSS</li>
           </ul>
-          <ProjectLinks>
+          <ProjectLinksRev>
             <a
               href="https://social-media-app-snvj.vercel.app/#_"
               target="_blank"
               rel="noreferrer"
             >
-              <ArrowSquareOut size={36} />
+              <ArrowSquareOut size={36} className="cursor" />
             </a>
             <a
               href="https://github.com/PeteHaugh/social-media-app"
               target="_blank"
               rel="noreferrer"
             >
-              <GithubLogo size={36} />
+              <GithubLogo size={36} className="cursor" />
             </a>
-          </ProjectLinks>
-        </TextDiv>
+          </ProjectLinksRev>
+        </TextDivRev>
         <ImageDiv>
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
-      </StyledProject>
+      </StyledProjectRev>
 
-      <StyledProjectRev>
-        <TextDivRev>
+      <StyledProject>
+        <TextDiv>
           <h2>Messaging App</h2>
 
           <p>
-            A live messaging app using Firebase Hooks to delivery messaging,
-            featuring different chat rooms powered by redux.
+            A live messaging app using Firebase Hooks to deliver messages in
+            real-time, featuring different chat rooms powered by redux. Log in
+            using your google account to start sending messages.
           </p>
 
           <ul>
@@ -62,57 +97,20 @@ const Projects = () => {
             <li>Firebase</li>
             <li>Style Components</li>
           </ul>
-          <ProjectLinksRev>
+          <ProjectLinks>
             <a
               href="https://messaging-app-cf251.web.app/"
               target="_blank"
               rel="noreferrer"
             >
-              <ArrowSquareOut size={36} />
+              <ArrowSquareOut size={36} className="cursor" />
             </a>
             <a
               href="https://github.com/PeteHaugh/messaging-app"
               target="_blank"
               rel="noreferrer"
             >
-              <GithubLogo size={36} />
-            </a>
-          </ProjectLinksRev>
-        </TextDivRev>
-        <ImageDiv>
-          <img src={require("../../assets/images/TestProject.png")} alt="" />
-        </ImageDiv>
-      </StyledProjectRev>
-      <StyledProject>
-        <TextDiv>
-          <h2>Cooking Blog</h2>
-
-          <p>
-            A cooking blog
-            <hr />
-            Check out the source cotent @TheGreedyGinger!
-          </p>
-
-          <ul>
-            <li>Next.js</li>
-            <li>Typescript</li>
-            <li>Sanity CMS</li>
-            <li>Tailwind CSS</li>
-          </ul>
-          <ProjectLinks>
-            <a
-              href="https://blog-cms-seven-rho.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ArrowSquareOut size={36} />
-            </a>
-            <a
-              href="https://github.com/PeteHaugh/blog-cms"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GithubLogo size={36} />
+              <GithubLogo size={36} className="cursor" />
             </a>
           </ProjectLinks>
         </TextDiv>
@@ -122,22 +120,30 @@ const Projects = () => {
       </StyledProject>
       <StyledProjectRev>
         <TextDivRev>
-          <h2>
-            <Link to="/ConnectFour">Spotify</Link>
-          </h2>
+          <h2>Cooking Blog</h2>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-            adipisci! Cupiditate necessitatibus perferendis iure iusto vero quod
-            delectus provident suscipit voluptates. Cumque blanditiis totam
-            obcaecati repellat ipsam veniam dicta! Eius.
+            A cooking blog that using Sanity CMS to manage the content. The site
+            implements incremental static regeneration (thanks to Next) alloing
+            updating of static content instantly without needing to fully
+            rebuild the site
+          </p>
+          <p>
+            Source content (with permission) from{" "}
+            <a
+              href="https://www.instagram.com/the_greedy_ginger/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @TheGreedyGinger!
+            </a>
           </p>
 
           <ul>
             <li>Next.js</li>
             <li>Typescript</li>
+            <li>Sanity CMS</li>
             <li>Tailwind CSS</li>
-            <li></li>
           </ul>
           <ProjectLinksRev>
             <a
@@ -145,14 +151,14 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <ArrowSquareOut size={36} />
+              <ArrowSquareOut size={36} className="cursor" />
             </a>
             <a
               href="https://github.com/PeteHaugh/blog-cms"
               target="_blank"
               rel="noreferrer"
             >
-              <GithubLogo size={36} color="#E85A4F" />
+              <GithubLogo size={36} className="cursor" />
             </a>
           </ProjectLinksRev>
         </TextDivRev>
@@ -160,20 +166,59 @@ const Projects = () => {
           <img src={require("../../assets/images/TestProject.png")} alt="" />
         </ImageDiv>
       </StyledProjectRev>
+
       <h2 className="Other">Other noteworthy projects</h2>
       <OtherProjectDiv>
+        <OtherProject>
+          <div className="top">
+            <h3>Connect Four</h3>
+            <Code size={36} />
+          </div>
+          <p>
+            A simple connect four game, where you play against the computer. The
+            computer consists of the Minimax algorithm, a recursive algorithm
+            which is used for finding the optimum move. The backend is written
+            in Python and deployed using Flask, which sends optimum responses to
+            player moves on the React based interface.
+          </p>
+          <p>
+            If you beat the AI, I'll improve the way it evaluates gamestate!
+          </p>
+          <div className="bottom">
+            <Link to="/ConnectFour">
+              <ArrowSquareOut size={36} className="cursor" />
+            </Link>
+            <GithubLogo size={36} className="cursor" />
+          </div>
+        </OtherProject>
+
+        <OtherProject>
+          <div className="top">
+            <h3>Spotify Stats</h3>
+            <Code size={36} />
+          </div>
+          <p>A site to view your spotify stats.</p>
+          <div className="bottom">
+            <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
+            <GithubLogo size={36} className="cursor" />
+          </div>
+        </OtherProject>
         <OtherProject>
           <div className="top">
             <h3>MATLAB</h3>
             <Code size={36} />
           </div>
-          <p>
-            A first principles partial differential equation solv **Disclaimer,
-            intense maths**
-          </p>
+          <p>A first principles partial differential equation solv</p>
+          <p>**Disclaimer, intense maths**</p>
           <div className="bottom">
-            <ArrowSquareOut size={36} />
-            <GithubLogo size={36} />
+            <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
+            <a
+              href="https://github.com/PeteHaugh/Transient-FEM-Modelling"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubLogo size={36} className="cursor" />
+            </a>
           </div>
         </OtherProject>
 
@@ -187,28 +232,26 @@ const Projects = () => {
             This
           </p>
           <div className="bottom">
-            <ArrowSquareOut size={36} />
-            <GithubLogo size={36} />
+            <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
+            <a
+              href="https://github.com/PeteHaugh/Golang-Chat/tree/master/backend"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubLogo size={36} className="cursor" />
+            </a>
           </div>
         </OtherProject>
 
         <OtherProject>
           <div className="top">
-            <h3>Connect Four</h3>
+            <h3>More to come...</h3>
             <Code size={36} />
           </div>
-          <p>
-            A simple connect four game, where you play against the computer. The
-            computer consists of the Minimax algorithm, a recursive algorithm
-            which is used for finding the optimum move. The backend is written
-            in Python and deployed using Flask, which sends optimum responses to
-            player moves on the React based interface.
-            <hr />
-            If you beat the AI, I'll improve the way it evaluates gamestate!
-          </p>
+          <h1 className="wip">WIP</h1>
           <div className="bottom">
-            <Link to="/ConnectFour"><ArrowSquareOut size={36} /></Link>
-            <GithubLogo size={36} />
+            <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
+            <GithubLogo size={36} style={{ opacity: 0.7 }} />
           </div>
         </OtherProject>
       </OtherProjectDiv>
@@ -262,14 +305,18 @@ const TextDiv = styled.div`
 const ProjectLinks = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   > a {
     padding: 2px;
     font-weight: bold;
+    cursor: pointer;
+    color: #6f6e6a;
 
     &:hover {
       transition: all 0.2s ease-in-out;
-      transform: scale(0.9);
+      transform: scale(0.95);
+      color: var(--heading-color);
     }
   }
 `;
@@ -362,7 +409,7 @@ const OtherProjectDiv = styled.div`
   padding: 0px;
   margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
   position: relative;
   width: 70vw;
@@ -403,5 +450,24 @@ const OtherProject = styled.div`
     transition: all 0.3s ease-in-out;
     transform: scale(0.99);
     box-shadow: 3px 3px 0 #bcbcbc;
+  }
+
+  .wip {
+    text-shadow: none;
+    margin: 0;
+    text-align: center;
+    padding-right: 15px;
+    color: var(--font-color);
+    opacity: 0.5;
+  }
+
+  .cursor {
+    cursor: pointer;
+    color: #6f6e6a;
+
+    &:hover {
+      color: var(--heading-color);
+      transition: all 0.3s linear;
+    }
   }
 `;
