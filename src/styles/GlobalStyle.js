@@ -28,30 +28,33 @@ const GlobalStyle = createGlobalStyle`
         transition: all 0.5s ease;
         /* 'League Spartan', */
         font-family:  'Helvetica', sans-serif;
+        scroll-behavior: smooth;
+
         ::-webkit-scrollbar {
-    background-color: gray;
-  }
+          background-color: gray;
+        }
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #eae7dc;
-    opacity: 0;
-  }
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #eae7dc;
+          opacity: 0;
+        }
 
-  ::-webkit-scrollbar-thumb {
-    background: #2f3136;
-    border-radius: 4px;
-  }
+        ::-webkit-scrollbar-thumb {
+          background: #2f3136;
+          border-radius: 4px;
+        }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #E85A4F;
-  }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #E85A4F;
+        }
     }
 
     :root {
         min-height: 100vh;
+        scroll-behavior: smooth;
     }
 
     main {

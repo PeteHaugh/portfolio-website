@@ -117,6 +117,7 @@ const ThanksDiv = styled.div`
   padding: 0 10px;
   max-width: 48rem;
   margin: 0 auto;
+  min-height: 400px;
 
   > h3 {
     font-size: 1.875rem;
@@ -131,6 +132,7 @@ const StyledForm = styled.form`
   padding: 10px;
   max-width: 48rem;
   margin: 0 auto;
+  min-height: 400px;
 
   > h3 {
     font-size: 1.875rem;
@@ -199,7 +201,6 @@ const StyledContactSection = styled.section`
   margin: 0 auto;
   padding: 5px;
   position: relative;
-  
 
   > h1 {
     margin: 20px 0;
