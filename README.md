@@ -8,7 +8,7 @@ A portfolio site made using react. The interactive turntable was created using p
 - p5.js
 - Styled Components
 
-![](https://github.com/portfolio-website/src/assets/gifs/Social-Media-Gif.gif)
+![](https://github.com/portfolio-website/src/assets/gifs/Portfolio2-Gif.gif)
 
 # Getting Started with Create React App
 
