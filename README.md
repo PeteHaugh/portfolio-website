@@ -1,3 +1,15 @@
+# My portfolio site!
+
+A portfolio site made using react. The interactive turntable was created using p5.js It also hosts the front end for some of my smaller projects such as my Connect Four game.
+
+- React.js
+- React Router
+- Typescript
+- p5.js
+- Styled Components
+
+![](https://github.com/portfolio-website/src/assets/gifs/Portfolio2.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
