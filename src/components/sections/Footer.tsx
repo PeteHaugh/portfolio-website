@@ -66,7 +66,8 @@ const StyledLinks = styled.div`
   display: flex;
   justify-content: space-evenly;
 
-  > a {
+  > a,
+  span {
     margin: 0 auto;
     &:hover {
       transition: all 0.3s ease-in-out;
@@ -74,10 +75,11 @@ const StyledLinks = styled.div`
     }
   }
 
-  > div > a {
+  > div > a,
+  span {
     padding: 10px;
-  }
-  > div > a {
+    cursor: pointer;
+
     &:hover {
       transition: all 0.5s ease-in-out;
       transform: scale(0.9);

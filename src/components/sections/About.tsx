@@ -29,7 +29,7 @@ const About = () => {
             I am confident working with <span>Javascript (ES6+)</span>,{" "}
             <span>Typescript</span>, <span>SQL</span>, and <span>Python</span>
             as well as a large number of libraries, frameworks and APIs such as{" "}
-            <span>React</span>, <span>Express</span>, <span>node.js</span>, <span>Flask</span> and
+            <span>React</span>, <span>Next.js</span>, <span>Express</span>, <span>node.js</span>, <span>Flask</span> and
             more...
           </p>
           <p>

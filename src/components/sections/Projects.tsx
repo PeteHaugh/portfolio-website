@@ -11,7 +11,7 @@ const Projects = () => {
           <h2>Portfolio Site</h2>
 
           <p>
-            A portfolio site made using react. The interactive turntable was
+            A portfolio site made using React. The interactive turntable was
             created using p5.js It also hosts the front end for some of my
             smaller projects such as my{" "}
             <Link className="linkfour" to="/ConnectFour">
@@ -56,7 +56,7 @@ const Projects = () => {
           <p>
             A Reddit style social media app. After logging in using OAuth, user
             can create posts, create subreddits, comment on posts and more. It
-            also includes a functioning reddit-style up vote system. This
+            also includes a functioning Reddit-style up vote system. This
             project was made to practice using GraphQL and Apollo Client.
             <hr />
             Feel free to leave a post!
@@ -106,7 +106,7 @@ const Projects = () => {
 
           <p>
             A live messaging app using Firebase to deliver messages in
-            real-time, featuring different chat rooms powered by redux. Log in
+            real-time, featuring different chat rooms powered by Redux. Log in
             using your google account to start sending messages.
           </p>
 
@@ -316,6 +316,7 @@ const TextDiv = styled.div`
   > h2 {
     margin-top: 0;
     color: #6c6a66;
+    text-decoration: underline;
   }
 
   > ul {
