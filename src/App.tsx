@@ -5,7 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { GlobalStyle } from "./styles";
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import {
   TurntablePage,
   ConnectFourPage,

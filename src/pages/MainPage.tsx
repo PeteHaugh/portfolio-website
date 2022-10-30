@@ -7,6 +7,7 @@ const MainPage = () => {
   return (
     <StyledMainPage>
       <Burger />
+      <CVDownload />
       <StyledHome id="Home">
         <Home />
         <Turntable />
@@ -29,6 +30,10 @@ const MainPage = () => {
 export default MainPage;
 
 const StyledMainPage = styled.main``;
+
+const CVDownload = styled.div`
+
+`;
 
 const StyledHome = styled.div`
   width: 100%;
