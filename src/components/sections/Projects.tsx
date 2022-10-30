@@ -32,7 +32,7 @@ const Projects = () => {
             <ArrowSquareOut size={36} style={{ opacity: 0.7 }} />
 
             <a
-              href="https://github.com/PeteHaugh/blog-cms"
+              href="https://github.com/PeteHaugh/portfolio-website"
               target="_blank"
               rel="noreferrer"
             >
@@ -41,7 +41,13 @@ const Projects = () => {
           </ProjectLinks>
         </TextDiv>
         <ImageDiv>
-        <img src={require("../../assets/gifs/Portfolio2-Gif.gif")} alt="" />
+          <a
+            href="https://github.com/PeteHaugh/portfolio-website"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={require("../../assets/gifs/Portfolio2-Gif.gif")} alt="" />
+          </a>
         </ImageDiv>
       </StyledProject>
       <StyledProjectRev>
@@ -81,7 +87,16 @@ const Projects = () => {
           </ProjectLinksRev>
         </TextDivRev>
         <ImageDiv>
-        <img src={require("../../assets/gifs/Social-Media-Gif.gif")} alt="" />
+          <a
+            href="https://social-media-app-snvj.vercel.app/#_"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={require("../../assets/gifs/Social-Media-Gif.gif")}
+              alt=""
+            />
+          </a>
         </ImageDiv>
       </StyledProjectRev>
 
@@ -99,7 +114,7 @@ const Projects = () => {
             <li>React</li>
             <li>Redux</li>
             <li>Firebase</li>
-            <li>Style Components</li>
+            <li>Styled Components</li>
           </ul>
           <ProjectLinks>
             <a
@@ -119,10 +134,16 @@ const Projects = () => {
           </ProjectLinks>
         </TextDiv>
         <ImageDiv>
-          <img
-            src={require("../../assets/gifs/Messaging-App-Gif.gif")}
-            alt=""
-          />
+          <a
+            href="https://messaging-app-cf251.web.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={require("../../assets/gifs/Messaging-App-Gif.gif")}
+              alt=""
+            />
+          </a>
         </ImageDiv>
       </StyledProject>
       <StyledProjectRev>
@@ -130,7 +151,7 @@ const Projects = () => {
           <h2>Cooking Blog</h2>
 
           <p>
-            A cooking blog that using Sanity CMS to manage the content. The site
+            A cooking blog that uses Sanity CMS to manage the content. The site
             implements incremental static regeneration (thanks to Next) allowing
             updating of static content instantly without needing to fully
             rebuild the site.
@@ -170,7 +191,16 @@ const Projects = () => {
           </ProjectLinksRev>
         </TextDivRev>
         <ImageDiv>
-          <img src={require("../../assets/gifs/Cooking-Blog-Gif.gif")} alt="" />
+          <a
+            href="https://blog-cms-seven-rho.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={require("../../assets/gifs/Cooking-Blog-Gif.gif")}
+              alt=""
+            />
+          </a>
         </ImageDiv>
       </StyledProjectRev>
 
@@ -360,7 +390,7 @@ const ProjectLinks = styled.div`
 const ImageDiv = styled.div`
   flex: 0.5;
 
-  > img {
+  > a > img {
     width: 100%;
     border: 5px solid gray;
     box-shadow: 5px 5px 0 #bcbcbc;
