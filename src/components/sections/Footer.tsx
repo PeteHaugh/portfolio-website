@@ -9,13 +9,13 @@ import styled from "styled-components";
 
 const Footer = () => {
   const onButtonClick = () => {
-    fetch("SamplePDF.pdf").then((response) => {
+    fetch("Pete_Haugh_CV.pdf").then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
 
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "SamplePDF.pdf";
+        alink.download = "Pete_Haugh_CV.pdf";
         alink.click();
       });
     });
